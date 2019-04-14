@@ -6,7 +6,7 @@ echo -e "\n====== bx2's dotfiles setup wizzard ======\n"
 echo -n "Setup OS (Y/n) => "; read answer
 if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   # install macos dev tools
-  xcode-select --install 
+  xcode-select --install
   [[ -a ~/.hushlogin ]] && touch ~/.hushlogin
 
   defaults write -g ApplePressAndHoldEnabled -bool false
@@ -80,6 +80,7 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
 
   # python tools
   pip install virtualenvwrapper
+  pip3 install black
   pip2 install neovim
   pip3 install neovim
 
@@ -123,4 +124,3 @@ fi
 
 echo -e "\n====== All Done!! ======\n"
 echo
-

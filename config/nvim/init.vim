@@ -85,6 +85,7 @@ let g:ale_sign_column_always=1
 let g:ale_set_highlights=0
 let g:ale_linters={
 \   'go': ['gopls', 'golint', 'go vet'],
+\   'python': ['black'],
 \}
 let g:ale_fixers={
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
