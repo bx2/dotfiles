@@ -2,12 +2,19 @@
 
 echo -e "\n====== bx2's dotfiles setup wizzard ======\n"
 
-# Install all the packages
-echo -n "Install all base packages (Y/n) => "; read answer
+# setup the os
+echo -n "Setup OS (Y/n) => "; read answer
 if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   # install macos dev tools
   xcode-select --install 
+  [[ -a ~/.hushlogin ]] && touch ~/.hushlogin
+  defaults write -g ApplePressAndHoldEnabled -bool false
+  chsh -s /bin/zsh
+fi
 
+# install all the packages
+echo -n "Install all base packages (Y/n) => "; read answer
+if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   # install brew
   if which brew > /dev/null; then
     echo "Homebrew installed.. Skipping.."
@@ -66,17 +73,26 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
 # install prettier
 # install black
 # install checkmake
-# install gotools
 fi
 
-echo -n "Setup OS (Y/n) => "; read answer
+# symlink config files
+echo -n "Install/re-install symlinks (Y/n) => "; read answer
 if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
-    [[ -a ~/.hushlogin ]] && touch ~/.hushlogin
-    defaults write -g ApplePressAndHoldEnabled -bool false
-    chsh -s /bin/zsh
+  sudo rm -rf ~/.vim* > /dev/null 2>&1
+  sudo rm -rf ~/.zshrc > /dev/null 2>&1
+  sudo rm -rf ~/.ctags > /dev/null 2>&1
+  sudo rm -rf ~/.git* > /dev/null 2>&1
+  sudo rm -rf ~/.config > /dev/null 2>&1
+
+  BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  ln -sf $BASE_DIR/zsh/zshrc ~/.zshrc
+  ln -sf $BASE_DIR/git/gitconfig ~/.gitconfig
+  ln -sf $BASE_DIR/git/gitmessage ~/.gitmessage
+  ln -sf $BASE_DIR/git/gitignore ~/.gitignore
+  ln -sf $BASE_DIR/ctags/ctags ~/.ctags
+  ln -sf $BASE_DIR/config ~/.config
 fi
 
-#==============
 echo -e "\n====== All Done!! ======\n"
 echo
 
