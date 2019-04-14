@@ -23,6 +23,7 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   defaults write com.apple.dock autohide -bool true
   defaults write com.apple.dock hide-mirror -bool true
 
+  # security
   sudo systemsetup -setremoteappleevents off
   sudo systemsetup -setremotelogin off
   sudo systemsetup -setwakeonmodem off
