@@ -7,6 +7,9 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" this needs to be enabled before ALE is loaded
+let g:ale_completion_enabled=1
+
 " install plugins
 call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -65,6 +68,7 @@ cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
 " linting
+let g:ale_go_bingo_executable = 'gopls'
 let g:ale_linters_explicit=1
 let g:ale_sign_column_always=1
 let g:ale_set_highlights=0
