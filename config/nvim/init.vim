@@ -20,18 +20,12 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'w0rp/ale'
 call plug#end()
 
-" colors
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-  hi Search ctermbg=magenta ctermfg=black
-endif
-
 " general
 filetype plugin indent on
 syntax on
 
 " options
+set termguicolors 
 set encoding=utf-8
 set nowrap
 set number
@@ -49,6 +43,13 @@ set cursorline
 set nojoinspaces
 set title
 set listchars=trail:·
+
+" colors
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+  hi Search ctermbg=magenta ctermfg=black
+endif
 
 " plugins options
 let g:netrw_banner=0

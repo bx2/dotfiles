@@ -10,11 +10,7 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   [[ -a ~/.hushlogin ]] && touch ~/.hushlogin
   defaults write -g ApplePressAndHoldEnabled -bool false
   chsh -s /bin/zsh
-fi
 
-# install all the packages
-echo -n "Install all base packages (Y/n) => "; read answer
-if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   # install brew
   if which brew > /dev/null; then
     echo "Homebrew installed.. Skipping.."
@@ -23,13 +19,15 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   fi
 
   # configure brew
-  brew doctor
   brew update
   brew upgrade
   brew tap caskroom/cask
   brew tap caskroom/fonts
+fi
 
-  # unix tools
+# install all the packages
+echo -n "Install all base packages (Y/n) => "; read answer
+if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   brew install zsh
   brew install nvim
   brew install git
@@ -39,6 +37,7 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   brew install nmap
   brew install nasm
   brew install ack
+  brew install the_silver_searcher
 
   # dev tools
   brew install automake
@@ -49,15 +48,6 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   # golang
   brew install golang
   brew install delve
-
-  # install golang tools
-  go get -u golang.org/x/tools/cmd/gopls
-  go get -u golang.org/x/tools/cmd/godoc
-  go get -u golang.org/x/tools/cmd/guru
-  go get -u golang.org/x/tools/cmd/goimports
-  go get -u golang.org/x/tools/cmd/gorename
-  go get -u golang.org/x/tools/cmd/cover
-  go get -u golang.org/x/tools/cmd/present
 
   # gui tools
   brew install koekeishiya/formulae/skhd
@@ -70,6 +60,9 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   pip2 install neovim
   pip3 install neovim
 
+  # terminal colors
+  git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+
 # install prettier
 # install black
 # install checkmake
@@ -78,7 +71,6 @@ fi
 # symlink config files
 echo -n "Install/re-install symlinks (Y/n) => "; read answer
 if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
-  sudo rm -rf ~/.vim* > /dev/null 2>&1
   sudo rm -rf ~/.zshrc > /dev/null 2>&1
   sudo rm -rf ~/.ctags > /dev/null 2>&1
   sudo rm -rf ~/.git* > /dev/null 2>&1
@@ -91,6 +83,19 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   ln -sf $BASE_DIR/git/gitignore ~/.gitignore
   ln -sf $BASE_DIR/ctags/ctags ~/.ctags
   ln -sf $BASE_DIR/config ~/.config
+fi
+
+# install go tools
+echo -n "Install/re-install gotools (Y/n) => "; read answer
+if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
+  source ~/.zshrc
+  go get -u golang.org/x/tools/cmd/gopls
+  go get -u golang.org/x/tools/cmd/godoc
+  go get -u golang.org/x/tools/cmd/guru
+  go get -u golang.org/x/tools/cmd/goimports
+  go get -u golang.org/x/tools/cmd/gorename
+  go get -u golang.org/x/tools/cmd/cover
+  go get -u golang.org/x/tools/cmd/present
 fi
 
 echo -e "\n====== All Done!! ======\n"

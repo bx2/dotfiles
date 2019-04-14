@@ -1,5 +1,9 @@
 #!/bin/zsh
 
+# terminal colors
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
 # global zsh settings
 autoload -Uz compinit && compinit
 autoload -U colors && colors
@@ -51,10 +55,6 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 [[ -a /usr/local/bin/virtualenvwrapper.sh ]] && source /usr/local/bin/virtualenvwrapper.sh
 [[ -a /usr/libexec/path_helper ]] && eval `/usr/libexec/path_helper -s`
 
-# terminal colors
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
 # fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
@@ -68,5 +68,4 @@ alias gorun='go run $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 
 alias gorace='go run -race $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 1)'
 alias vim=nvim
 alias vi=nvim
-alias sn='vim -c ":SimplenoteList"'
 
