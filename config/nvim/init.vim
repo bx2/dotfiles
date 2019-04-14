@@ -25,7 +25,9 @@ filetype plugin indent on
 syntax on
 
 " options
-set termguicolors 
+set mouse=a
+set completeopt=menu,menuone,preview,noselect,noinsert
+set termguicolors
 set encoding=utf-8
 set nowrap
 set number
@@ -76,14 +78,13 @@ if maparg('<C-L>', 'n') ==# ''
 endif
 
 " linting
-let g:ale_go_bingo_executable = 'gopls'
+let g:ale_fix_on_save=1
 let g:ale_linters_explicit=1
+let g:ale_set_balloons=1
 let g:ale_sign_column_always=1
 let g:ale_set_highlights=0
 let g:ale_linters={
-\   'go': ['golint', 'go vet'],
-\   'make': ['checkmake'],
-\   'vim': ['vint'],
+\   'go': ['gopls', 'golint', 'go vet'],
 \}
 let g:ale_fixers={
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
