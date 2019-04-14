@@ -83,13 +83,18 @@ let g:ale_linters_explicit=1
 let g:ale_set_balloons=1
 let g:ale_sign_column_always=1
 let g:ale_set_highlights=0
+let g:ale_linter_aliases = {'javascript': ['css', 'jsx', 'html', 'typescript', 'yaml']}
+let g:ale_fixer_aliases = {'javascript': ['css', 'jsx', 'html', 'typescript', 'yaml']}
 let g:ale_linters={
 \   'go': ['gopls', 'golint', 'go vet'],
 \   'python': ['black'],
+\   'javascript': ['prettier'],
 \}
 let g:ale_fixers={
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'go': ['gofmt', 'goimports'],
+\   'python': ['black'],
+\   'javascript': ['prettier'],
 \}
 
 " latex

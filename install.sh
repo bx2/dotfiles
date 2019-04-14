@@ -87,9 +87,9 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   # terminal colors
   git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
-# install prettier
-# install black
-# install checkmake
+  # js
+  brew install yarn
+  yarn global add prettier
 fi
 
 # symlink config files
