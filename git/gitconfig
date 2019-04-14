@@ -1,0 +1,27 @@
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+[user]
+    name = Bartosz Burclaf
+    email = burclaf@gmail.com
+[push]
+    default = tracking
+    followTags = true
+[commit]
+    template = ~/.gitmessage
+[alias]
+    st = status
+    co = checkout
+    ci = commit
+    br = branch
+    dc = diff --cached
+    sh = stash
+    sl = stash list
+    sa = stash apply
+    ss = stash save
+    r = reset
+    rh = reset HEAD --
+    rhh = reset HEAD --hard
+    lol = log --graph --oneline --decorate
+    d = difftool
+
