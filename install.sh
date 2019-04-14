@@ -8,7 +8,29 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   # install macos dev tools
   xcode-select --install 
   [[ -a ~/.hushlogin ]] && touch ~/.hushlogin
+
   defaults write -g ApplePressAndHoldEnabled -bool false
+  defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+  defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+  defaults write com.apple.LaunchServices LSQuarantine -bool false
+  defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+  defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+  defaults write NSGlobalDomain KeyRepeat -int 2
+  defaults write NSGlobalDomain InitialKeyRepeat -int 10
+  defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+  defaults write com.apple.dock mru-spaces -bool false
+  defaults write com.apple.dock autohide-delay -float 0
+  defaults write com.apple.dock autohide -bool true
+  defaults write com.apple.dock hide-mirror -bool true
+
+  sudo systemsetup -setremoteappleevents off
+  sudo systemsetup -setremotelogin off
+  sudo systemsetup -setwakeonmodem off
+  sudo systemsetup -setwakeonnetworkaccess off
+
+  sudo tmutil disablelocal
+  sudo nvram SystemAudioVolume=" "
+
   chsh -s /bin/zsh
 
   # install brew
