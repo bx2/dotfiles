@@ -12,10 +12,12 @@ let g:ale_completion_enabled=1
 
 " install plugins
 call plug#begin('~/.config/nvim/plugged')
+  Plug 'sheerun/vim-polyglot'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'chriskempson/base16-vim'
   Plug 'lervag/vimtex'
   Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-sleuth'
   Plug 'mileszs/ack.vim'
   Plug 'w0rp/ale'
 call plug#end()
@@ -83,19 +85,28 @@ let g:ale_linters_explicit=1
 let g:ale_set_balloons=1
 let g:ale_sign_column_always=1
 let g:ale_set_highlights=0
-let g:ale_linter_aliases = {'javascript': ['css', 'jsx', 'html', 'typescript', 'yaml']}
-let g:ale_fixer_aliases = {'javascript': ['css', 'jsx', 'html', 'typescript', 'yaml']}
 let g:ale_linters={
-\   'go': ['gopls', 'golint', 'go vet'],
-\   'python': ['black'],
-\   'javascript': ['prettier'],
+\   'go': ['gopls', 'gobuild', 'gofmt', 'golint', 'govet'],
+\   'python': ['pyls'],
+\   'javascript': ['tsserver'],
+\   'typescript': ['tsserver', 'tslint'],
 \}
 let g:ale_fixers={
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'go': ['gofmt', 'goimports'],
-\   'python': ['black'],
+\   'go': ['goimports', 'gofmt'],
+\   'python': ['black', 'isort'],
 \   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
+\   'json': ['prettier'],
+\   'css': ['prettier'],
+\   'html': ['prettier'],
 \}
+let g:ale_python_pyls_use_global=1
+let g:ale_python_pyls_auto_pipenv=1
+let g:ale_python_black_use_global=1
+let g:ale_python_auto_pipenv=1
+let g:ale_python_black_auto_pipenv=1
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 
 " latex
 let g:tex_flavor='latex'
