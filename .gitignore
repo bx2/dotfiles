@@ -2,3 +2,4 @@ config/nvim/plugged/**
 config/nvim/autoload/**
 config/base16-shell
 config/yarn
+config/configstore

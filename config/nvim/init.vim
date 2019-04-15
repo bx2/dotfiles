@@ -102,10 +102,10 @@ let g:ale_fixers={
 \   'html': ['prettier'],
 \}
 let g:ale_python_pyls_use_global=1
-let g:ale_python_pyls_auto_pipenv=1
+let g:ale_python_pyls_auto_pipenv=0
 let g:ale_python_black_use_global=1
-let g:ale_python_auto_pipenv=1
-let g:ale_python_black_auto_pipenv=1
+let g:ale_python_auto_pipenv=0
+let g:ale_python_black_auto_pipenv=0
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 
 " latex
