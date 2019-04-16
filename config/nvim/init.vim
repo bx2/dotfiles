@@ -14,6 +14,7 @@ let g:ale_completion_enabled=1
 call plug#begin('~/.config/nvim/plugged')
   Plug 'sheerun/vim-polyglot'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
   Plug 'chriskempson/base16-vim'
   Plug 'lervag/vimtex'
   Plug 'tpope/vim-commentary'
@@ -49,6 +50,7 @@ set title
 set listchars=trail:·
 set incsearch
 set hlsearch
+set wildignore=*.o,*~,*.pyc
 
 " colors
 if filereadable(expand("~/.vimrc_background"))
