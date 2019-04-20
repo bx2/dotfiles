@@ -82,42 +82,46 @@ if maparg('<C-L>', 'n') ==# ''
 endif
 
 " linting
+let g:ale_lint_on_enter=1
+let g:ale_c_parse_makefile=1
 let g:ale_fix_on_save=1
 let g:ale_linters_explicit=1
 let g:ale_set_balloons=1
 let g:ale_sign_column_always=1
 let g:ale_set_highlights=0
-let g:ale_linters={
-\   'go': ['gopls', 'gobuild', 'gofmt', 'golint', 'govet'],
-\   'python': ['pyls'],
-\   'javascript': ['tsserver'],
-\   'typescript': ['tsserver', 'tslint'],
-\}
-let g:ale_fixers={
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'go': ['goimports', 'gofmt'],
-\   'python': ['black', 'isort'],
-\   'javascript': ['prettier'],
-\   'typescript': ['prettier'],
-\   'json': ['prettier'],
-\   'css': ['prettier'],
-\   'html': ['prettier'],
-\}
 let g:ale_python_pyls_use_global=1
 let g:ale_python_pyls_auto_pipenv=0
 let g:ale_python_black_use_global=1
 let g:ale_python_auto_pipenv=0
 let g:ale_python_black_auto_pipenv=0
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
+let g:ale_linters={
+\ 'c': ['clang', 'clangd', 'clangtidy', 'cquery', 'flawfinder', 'gcc'],
+\ 'go': ['gopls', 'gobuild', 'gofmt', 'golint', 'govet'],
+\ 'python': ['pyls'],
+\ 'javascript': ['tsserver'],
+\ 'typescript': ['tsserver', 'tslint'],
+\}
+let g:ale_fixers={
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\ 'c': ['clang-format', 'uncrustify'],
+\ 'go': ['goimports', 'gofmt'],
+\ 'python': ['black', 'isort'],
+\ 'javascript': ['prettier'],
+\ 'typescript': ['prettier'],
+\ 'json': ['prettier'],
+\ 'css': ['prettier'],
+\ 'html': ['prettier'],
+\}
 
 " latex
 let g:tex_flavor='latex'
-let g:vimtex_compiler_latexmk={
-    \ 'continuous' : 1,
-    \}
 let g:vimtex_view_method='skim'
 let g:vimex_quickfix_mode=0
 let g:vimtex_view_automatic=1
+let g:vimtex_compiler_latexmk={
+\ 'continuous' : 1,
+\}
 
 " bindings
 nnoremap ; :

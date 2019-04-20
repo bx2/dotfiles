@@ -67,6 +67,9 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   brew install python
   brew install python@2
   brew install jq
+  brew install llvm
+  brew install uncrustify
+  brew install flawfinder
 
   # golang
   brew install golang

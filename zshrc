@@ -32,13 +32,17 @@ export MYVIMRC='~/.config/nvim/init.vim'
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
+# c
+export LDFLAGS="-L$(brew --prefix llvm)/lib"
+export CPPFLAGS="-I$(brew --prefix llvm)/include"
+
 # golang settings
 export GOPATH=$HOME/Projects/GOLANG
 export GOROOT=/usr/local/opt/go/libexec
 export GO15VENDOREXPERIMENT=1
 
 # path settings
-export PATH=/usr/local/sbin:$PATH:$GOPATH/bin:$GOROOT/bin
+export PATH=/usr/local/opt/llvm/bin:/usr/local/sbin:$GOPATH/bin:$GOROOT/bin:$PATH
 export CDPATH=.:~:$GOPATH/src:~/Projects
 
 # virtualenvwrapper
@@ -68,4 +72,3 @@ alias gorun='go run $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 
 alias gorace='go run -race $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 1)'
 alias vim=nvim
 alias vi=nvim
-
