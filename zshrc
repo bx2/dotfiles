@@ -1,14 +1,14 @@
 #!/bin/zsh
 
-# terminal colors
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
 # global zsh settings
 autoload -Uz compinit && compinit
 autoload -U colors && colors
 setopt prompt_subst
 setopt extended_glob
+
+# terminal colors
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # prompt
 [[ -a /usr/local/etc/bash_completion.d/git-prompt.sh ]] && source /usr/local/etc/bash_completion.d/git-prompt.sh
@@ -33,8 +33,8 @@ export MYVIMRC='~/.config/nvim/init.vim'
 export HOMEBREW_NO_ANALYTICS=1
 
 # c
-export LDFLAGS="-L$(brew --prefix llvm)/lib"
-export CPPFLAGS="-I$(brew --prefix llvm)/include"
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
 
 # golang settings
 export GOPATH=$HOME/Projects/GOLANG
