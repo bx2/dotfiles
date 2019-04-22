@@ -9,6 +9,7 @@ endif
 
 " this needs to be enabled before ALE is loaded
 let g:ale_completion_enabled=1
+let g:ale_set_balloons=1
 
 " install plugins
 call plug#begin('~/.config/nvim/plugged')
@@ -97,7 +98,7 @@ let g:ale_python_black_auto_pipenv=0
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 let g:ale_linters={
 \ 'c': ['clang', 'clangd', 'clangtidy', 'cquery', 'flawfinder', 'gcc'],
-\ 'go': ['gopls', 'gobuild', 'gofmt', 'golint', 'govet'],
+\ 'go': ['gopls', 'gobuild', 'golint', 'govet'],
 \ 'python': ['pyls'],
 \ 'javascript': ['tsserver'],
 \ 'typescript': ['tsserver', 'tslint'],
@@ -113,6 +114,8 @@ let g:ale_fixers={
 \ 'css': ['prettier'],
 \ 'html': ['prettier'],
 \}
+
+nnoremap <C-]> :ALEGoToDefinitionInVSplit<cr>
 
 " latex
 let g:tex_flavor='latex'
