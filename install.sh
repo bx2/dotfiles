@@ -116,13 +116,8 @@ fi
 echo -n "Install/re-install gotools (Y/n) => "; read answer
 if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   source ~/.zshrc
-  go get -u golang.org/x/tools/cmd/gopls
-  go get -u golang.org/x/tools/cmd/godoc
-  go get -u golang.org/x/tools/cmd/guru
-  go get -u golang.org/x/tools/cmd/goimports
-  go get -u golang.org/x/tools/cmd/gorename
-  go get -u golang.org/x/tools/cmd/cover
-  go get -u golang.org/x/tools/cmd/present
+  go get -u golang.org/x/tools/cmd/...
+  go get -u honnef.co/go/tools/cmd/...
 fi
 
 echo -e "\n====== All Done!! ======\n"
