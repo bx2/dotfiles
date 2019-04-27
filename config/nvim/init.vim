@@ -60,6 +60,10 @@ if filereadable(expand("~/.vimrc_background"))
   hi Search ctermbg=magenta ctermfg=black
 endif
 
+" python setup
+let g:python_host_prog = '~/.virtualenvs/neovim2/bin/python'
+let g:python3_host_prog = '~/.virtualenvs/neovim3/bin/python'
+
 " plugins options
 let g:netrw_banner=0
 
@@ -90,16 +94,12 @@ let g:ale_linters_explicit=1
 let g:ale_set_balloons=1
 let g:ale_sign_column_always=1
 let g:ale_set_highlights=0
-let g:ale_python_pyls_use_global=1
-let g:ale_python_pyls_auto_pipenv=0
-let g:ale_python_black_use_global=1
-let g:ale_python_auto_pipenv=0
-let g:ale_python_black_auto_pipenv=0
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 let g:ale_linters={
 \ 'c': ['clang', 'clangd', 'clangtidy', 'cquery', 'flawfinder', 'gcc'],
-\ 'go': ['gopls', 'gobuild', 'golint', 'govet'],
+\ 'go': ['gopls', 'gofmt', 'gobuild', 'golint', 'govet', 'staticcheck'],
 \ 'python': ['pyls'],
+\ 'php': ['php', 'phpstan', 'phpmd', 'phpcs'],
 \ 'javascript': ['tsserver'],
 \ 'typescript': ['tsserver', 'tslint'],
 \}
@@ -111,9 +111,13 @@ let g:ale_fixers={
 \ 'javascript': ['prettier'],
 \ 'typescript': ['prettier'],
 \ 'json': ['prettier'],
+\ 'php': ['php_cs_fixer', 'prettier'],
 \ 'css': ['prettier'],
 \ 'html': ['prettier'],
 \}
+" ALE colors
+highlight ALEErrorSign ctermfg=1 ctermbg=18 guifg=#ff5c57 guibg=#34353e
+highlight ALEWartningSign ctermfg=3 ctermbg=18 guifg=#f3f99d guibg=#34353e
 
 nnoremap <C-]> :ALEGoToDefinitionInVSplit<cr>
 

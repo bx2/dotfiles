@@ -75,6 +75,13 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   brew install golang
   brew install delve
 
+  # php
+  brew install php
+  brew install php-cs-fixer
+  brew install phpstan
+  brew install phpmd
+  brew isntall php-code-sniffer
+
   # gui tools
   brew install koekeishiya/formulae/skhd
   brew install --HEAD chunkwm
@@ -84,8 +91,14 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   # python tools
   pip install virtualenvwrapper
   pip3 install black
+  pip install pyls
+
+  # TODO(bx2)
+  # here you need to first create a virtualenv and then install requirements
+  # otherwise nvim will not work properly
   pip2 install neovim
   pip3 install neovim
+  pip install --upgrade python-language-server
 
   # terminal colors
   git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
