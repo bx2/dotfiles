@@ -22,6 +22,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-sleuth'
   Plug 'mileszs/ack.vim'
   Plug 'w0rp/ale'
+  Plug 'ledger/vim-ledger'
 call plug#end()
 
 " general
