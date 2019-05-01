@@ -131,6 +131,17 @@ let g:vimtex_compiler_latexmk={
 \ 'continuous' : 1,
 \}
 
+" ledger
+let g:ledger_default_commodity='CHF'
+let g:ledger_default_commodity_before=0
+let g:ledger_default_date_format='%Y-%m-%d'
+let g:ledger_commodity_sep=' '
+let g:ledger_winpos='R'
+let g:ledger_extra_options='--pedantic --explicit --check-payees'
+
+" ledger autocomplete
+au FileType ledger inoremap <silent> <Tab> <C-r>=ledger#autocomplete_and_align()<CR>
+
 " bindings
 nnoremap ; :
 
