@@ -23,6 +23,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'mileszs/ack.vim'
   Plug 'w0rp/ale'
   Plug 'ledger/vim-ledger'
+  Plug 'mhinz/vim-signify'
 call plug#end()
 
 " general
@@ -65,9 +66,11 @@ if filereadable(expand("~/.vimrc_background"))
   hi Search ctermbg=magenta ctermfg=black
 endif
 
+let g:signify_vcs_list=['git']
+
 " python setup
-let g:python_host_prog = '~/.virtualenvs/neovim2/bin/python'
-let g:python3_host_prog = '~/.virtualenvs/neovim3/bin/python'
+let g:python_host_prog='~/.virtualenvs/neovim2/bin/python'
+let g:python3_host_prog='~/.virtualenvs/neovim3/bin/python'
 
 " plugins options
 let g:netrw_banner=0
