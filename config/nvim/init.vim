@@ -52,6 +52,10 @@ set title
 set listchars=trail:·
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
+set splitright
+set splitbelow
 set wildignore=*.o,*~,*.pyc
 
 " colors
@@ -140,7 +144,7 @@ let g:ledger_winpos='R'
 let g:ledger_extra_options='--pedantic --explicit --check-payees'
 
 " ledger autocomplete
-au FileType ledger inoremap <silent> <Tab> <C-r>=ledger#autocomplete_and_align()<CR>
+au FileType ledger inoremap <silent> <tab> <c-r>=ledger#autocomplete_and_align()<cr>
 
 " bindings
 nnoremap ; :
@@ -148,6 +152,9 @@ nnoremap ; :
 " next/previous buffer
 nnoremap ,. :bn<cr>
 nnoremap ,m :bp<cr>
+
+" remove highlight
+nnoremap ,, :noh<cr>
 
 " window switching
 map <C-h> <C-w>h
