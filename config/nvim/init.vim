@@ -43,7 +43,6 @@ set noerrorbells
 set nobackup
 set noswapfile
 set pastetoggle=<F2>
-set autochdir
 set autowrite
 set autowriteall
 set autoread
