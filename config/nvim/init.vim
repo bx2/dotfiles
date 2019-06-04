@@ -105,6 +105,7 @@ let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 let g:ale_linters={
 \ 'c': ['clang', 'clangd', 'clangtidy', 'cquery', 'flawfinder', 'gcc'],
 \ 'go': ['gopls', 'gofmt', 'gobuild', 'golint', 'govet', 'staticcheck'],
+\ 'rust': ['cargo'],
 \ 'python': ['pyls'],
 \ 'php': ['php', 'phpstan', 'phpmd', 'phpcs'],
 \ 'javascript': ['tsserver'],
@@ -114,6 +115,7 @@ let g:ale_fixers={
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
 \ 'c': ['clang-format', 'uncrustify'],
 \ 'go': ['goimports', 'gofmt'],
+\ 'rust': ['rustfmt'],
 \ 'python': ['black', 'isort'],
 \ 'javascript': ['prettier'],
 \ 'typescript': ['prettier'],
