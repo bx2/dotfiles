@@ -127,6 +127,11 @@ let g:ale_fixers={
 " ALE colors
 highlight ALEErrorSign ctermfg=1 ctermbg=18 guifg=#ff5c57 guibg=#34353e
 highlight ALEWartningSign ctermfg=3 ctermbg=18 guifg=#f3f99d guibg=#34353e
+let g:ale_rust_rls_config={
+\ 'rust': {
+\   'clippy_preference': 'on'
+\  }
+\}
 
 nnoremap <C-]> :ALEGoToDefinitionInVSplit<cr>
 
