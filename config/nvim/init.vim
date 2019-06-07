@@ -124,14 +124,15 @@ let g:ale_fixers={
 \ 'css': ['prettier'],
 \ 'html': ['prettier'],
 \}
-" ALE colors
-highlight ALEErrorSign ctermfg=1 ctermbg=18 guifg=#ff5c57 guibg=#34353e
-highlight ALEWartningSign ctermfg=3 ctermbg=18 guifg=#f3f99d guibg=#34353e
+" rust
 let g:ale_rust_rls_config={
 \ 'rust': {
 \   'clippy_preference': 'on'
 \  }
 \}
+" ALE colors
+highlight ALEErrorSign ctermfg=1 ctermbg=18 guifg=#ff5c57 guibg=#34353e
+highlight ALEWartningSign ctermfg=3 ctermbg=18 guifg=#f3f99d guibg=#34353e
 
 nnoremap <C-]> :ALEGoToDefinitionInVSplit<cr>
 
