@@ -108,7 +108,7 @@ let g:ale_linters={
 \ 'rust': ['cargo'],
 \ 'python': ['pyls'],
 \ 'php': ['php', 'phpstan', 'phpmd', 'phpcs'],
-\ 'javascript': ['tsserver'],
+\ 'javascript': ['tsserver', 'prettier_eslint'],
 \ 'typescript': ['tsserver', 'tslint'],
 \}
 let g:ale_fixers={
