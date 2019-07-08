@@ -149,9 +149,12 @@ let g:vimtex_compiler_latexmk={
 " vdebug
 let g:vdebug_options={
 \ 'idekey': 'xdebug',
-\ 'break_on_open': 0,
-\ 'server': '127.0.0.1',
-\ 'port': '9000'
+\ 'ide_key': 'xdebug',
+\ 'break_on_open': 1,
+\ 'timeout': 30,
+\ 'server': '',
+\ 'port': '9000',
+\ 'path_maps': {"/var/www/devenv": "/Users/bx2/Projects/rtk-console"}
 \}
 
 " ledger
