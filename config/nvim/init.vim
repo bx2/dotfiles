@@ -24,6 +24,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'w0rp/ale'
   Plug 'ledger/vim-ledger'
   Plug 'mhinz/vim-signify'
+  Plug 'vim-vdebug/vdebug'
 call plug#end()
 
 " general
@@ -143,6 +144,14 @@ let g:vimex_quickfix_mode=0
 let g:vimtex_view_automatic=1
 let g:vimtex_compiler_latexmk={
 \ 'continuous' : 1,
+\}
+
+" vdebug
+let g:vdebug_options={
+\ 'idekey': 'xdebug',
+\ 'break_on_open': 0,
+\ 'server': '127.0.0.1',
+\ 'port': '9000'
 \}
 
 " ledger

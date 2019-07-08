@@ -32,8 +32,6 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   sudo tmutil disablelocal
   sudo nvram SystemAudioVolume=" "
 
-  chsh -s /bin/zsh
-
   # install brew
   if which brew > /dev/null; then
     echo "Homebrew installed.. Skipping.."
@@ -83,9 +81,6 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   brew isntall php-code-sniffer
 
   # gui tools
-  brew install koekeishiya/formulae/skhd
-  brew install --HEAD chunkwm
-  brew cask install kitty
   brew cask install skim
 
   # python tools
@@ -93,11 +88,10 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   pip3 install black
   pip install pyls
 
-  # TODO(bx2)
   # here you need to first create a virtualenv and then install requirements
   # otherwise nvim will not work properly
-  pip2 install neovim
-  pip3 install neovim
+  mkvirtualenv neovim2 && workon neovim2 && pip install neovim && deactivate
+  mkvirtualenv neovim3 --python=/usr/local/bin/python3 && workon neovim3 && pip install neovim && deactivate
   pip install --upgrade python-language-server
 
   # terminal colors
@@ -106,6 +100,9 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   # js
   brew install yarn
   yarn global add prettier
+
+  # update shell
+  sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 fi
 
 # symlink config files
