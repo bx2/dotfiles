@@ -103,6 +103,10 @@ let g:ale_set_balloons=1
 let g:ale_sign_column_always=1
 let g:ale_set_highlights=0
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
+let g:ale_c_clang_options = '-std=c11 -Wall'
+let g:ale_c_clangd_options = '-std=c11 -Wall'
+let g:ale_c_clangtidy_options = '-std=c11 -Wall'
+let g:ale_c_gcc_options = '-std=c11 -Wall'
 let g:ale_linters={
 \ 'c': ['clang', 'clangd', 'clangtidy', 'cquery', 'flawfinder', 'gcc'],
 \ 'go': ['gopls', 'gofmt', 'gobuild', 'golint', 'govet', 'staticcheck'],
