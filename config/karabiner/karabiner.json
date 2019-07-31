@@ -168,7 +168,7 @@
             "manipulators": [
               {
                 "from": {
-                  "key_code": "spacebar",
+                  "key_code": "left_control",
                   "modifiers": {
                     "optional": ["any"]
                   }
@@ -191,7 +191,7 @@
                 ],
                 "to_if_alone": [
                   {
-                    "key_code": "spacebar"
+                    "key_code": "left_control"
                   }
                 ],
                 "type": "basic"
