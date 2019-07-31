@@ -168,7 +168,7 @@
             "manipulators": [
               {
                 "from": {
-                  "key_code": "left_control",
+                  "key_code": "caps_lock",
                   "modifiers": {
                     "optional": ["any"]
                   }
@@ -191,7 +191,7 @@
                 ],
                 "to_if_alone": [
                   {
-                    "key_code": "left_control"
+                    "key_code": "escape"
                   }
                 ],
                 "type": "basic"
@@ -699,14 +699,6 @@
               },
               "to": {
                 "key_code": "right_command"
-              }
-            },
-            {
-              "from": {
-                "key_code": "caps_lock"
-              },
-              "to": {
-                "key_code": "escape"
               }
             }
           ]
