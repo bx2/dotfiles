@@ -25,6 +25,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'ledger/vim-ledger'
   Plug 'mhinz/vim-signify'
   Plug 'vim-vdebug/vdebug'
+  Plug 'mattn/emmet-vim'
 call plug#end()
 
 " general
@@ -94,6 +95,11 @@ if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
 
+" Emmet
+let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key=','
+autocmd FileType html,blade,css EmmetInstall
+
 " linting
 let g:ale_lint_on_enter=1
 let g:ale_c_parse_makefile=1
@@ -112,7 +118,7 @@ let g:ale_linters={
 \ 'go': ['gopls', 'gofmt', 'gobuild', 'golint', 'govet', 'staticcheck'],
 \ 'rust': ['cargo'],
 \ 'python': ['pyls'],
-\ 'php': ['php', 'phpstan', 'phpmd', 'phpcs'],
+\ 'php': ['php', 'phpstan'],
 \ 'javascript': ['tsserver', 'prettier_eslint'],
 \ 'typescript': ['tsserver', 'tslint'],
 \}
@@ -135,6 +141,9 @@ let g:ale_rust_rls_config={
 \   'clippy_preference': 'on'
 \  }
 \}
+"php
+let g:ale_php_phan_use_client = 1
+let g:ale_php_phan_executable = '/usr/local/bin/phpstan'
 " ALE colors
 highlight ALEErrorSign ctermfg=1 ctermbg=18 guifg=#ff5c57 guibg=#34353e
 highlight ALEWartningSign ctermfg=3 ctermbg=18 guifg=#f3f99d guibg=#34353e
