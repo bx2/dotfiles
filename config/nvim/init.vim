@@ -25,7 +25,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'ledger/vim-ledger'
   Plug 'mhinz/vim-signify'
   Plug 'vim-vdebug/vdebug'
-  Plug 'hhvm/vim-hack'
 call plug#end()
 
 " general
@@ -116,7 +115,6 @@ let g:ale_linters={
 \ 'php': ['php', 'phpstan', 'phpmd', 'phpcs'],
 \ 'javascript': ['tsserver', 'prettier_eslint'],
 \ 'typescript': ['tsserver', 'tslint'],
-\ 'hack': ['hack', 'hhast'],
 \}
 let g:ale_fixers={
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -130,7 +128,6 @@ let g:ale_fixers={
 \ 'php': ['php_cs_fixer', 'prettier'],
 \ 'css': ['prettier'],
 \ 'html': ['prettier'],
-\ 'hack': ['hackfmt'],
 \}
 " rust
 let g:ale_rust_rls_config={
