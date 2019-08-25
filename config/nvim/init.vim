@@ -120,7 +120,7 @@ let g:ale_linters={
 \ 'python': ['pyls'],
 \ 'php': ['php', 'phpstan'],
 \ 'javascript': ['tsserver', 'prettier_eslint'],
-\ 'typescript': ['tsserver', 'tslint'],
+\ 'typescript': ['tsserver', 'prettier_eslint'],
 \}
 let g:ale_fixers={
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
