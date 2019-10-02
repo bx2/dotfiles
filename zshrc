@@ -73,3 +73,4 @@ alias gorace='go run -race $(find . -name "*.go" -and -not -name "*_test.go" -ma
 alias vim=nvim
 alias vi=nvim
 alias dc=docker-compose
+alias dce='docker-compose exec'
