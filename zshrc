@@ -72,3 +72,4 @@ alias gorun='go run $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 
 alias gorace='go run -race $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 1)'
 alias vim=nvim
 alias vi=nvim
+alias dc=docker-compose
