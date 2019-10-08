@@ -19,10 +19,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'chriskempson/base16-vim'
   Plug 'lervag/vimtex'
   Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-sleuth'
   Plug 'mileszs/ack.vim'
   Plug 'w0rp/ale'
-  Plug 'ledger/vim-ledger'
   Plug 'mhinz/vim-signify'
   Plug 'vim-vdebug/vdebug'
   Plug 'mattn/emmet-vim'
@@ -34,7 +32,12 @@ syntax on
 
 " options
 set mouse=a
+set autoread
 set completeopt=menu,menuone,preview,noselect,noinsert
+set autoindent
+set backspace=indent,eol,start
+set complete-=i
+set smarttab
 set termguicolors
 set encoding=utf-8
 set nowrap
@@ -53,6 +56,9 @@ set nojoinspaces
 set title
 set listchars=trail:·
 set incsearch
+set laststatus=2
+set wildmenu
+set ruler
 set hlsearch
 set ignorecase
 set smartcase
@@ -100,6 +106,10 @@ let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key=','
 autocmd FileType html,blade,css EmmetInstall
 
+" indent
+autocmd FileType html,javascript,typescript,css setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+
 " linting
 let g:ale_lint_on_enter=1
 let g:ale_c_parse_makefile=1
@@ -115,12 +125,14 @@ let g:ale_c_clangtidy_options = '-std=c11 -Wall'
 let g:ale_c_gcc_options = '-std=c11 -Wall'
 let g:ale_linters={
 \ 'c': ['clang', 'clangd', 'clangtidy', 'cquery', 'flawfinder', 'gcc'],
-\ 'go': ['gopls', 'gofmt', 'gobuild', 'golint', 'govet', 'staticcheck'],
+\ 'go': ['gopls', 'gofmt', 'gobuild', 'golint', 'govet'],
 \ 'rust': ['cargo'],
 \ 'python': ['pyls'],
-\ 'php': ['php', 'phpstan'],
-\ 'javascript': ['tsserver', 'prettier_eslint'],
-\ 'typescript': ['tsserver', 'prettier_eslint'],
+\ 'php': ['php', 'phpstan', 'phpcs'],
+\ 'javascript': ['tsserver', 'eslint'],
+\ 'typescript': ['tsserver', 'eslint'],
+\ 'json': ['jsonlint'],
+\ 'html': [],
 \}
 let g:ale_fixers={
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -128,12 +140,12 @@ let g:ale_fixers={
 \ 'go': ['goimports', 'gofmt'],
 \ 'rust': ['rustfmt'],
 \ 'python': ['black', 'isort'],
-\ 'javascript': ['prettier'],
-\ 'typescript': ['prettier'],
-\ 'json': ['prettier'],
-\ 'php': ['php_cs_fixer', 'prettier'],
-\ 'css': ['prettier'],
-\ 'html': ['prettier'],
+\ 'php': ['php_cs_fixer'],
+\ 'javascript': ['eslint'],
+\ 'typescript': ['eslint'],
+\ 'json': ['jq'],
+\ 'css': [],
+\ 'html': [],
 \}
 " rust
 let g:ale_rust_rls_config={
@@ -169,17 +181,6 @@ let g:vdebug_options={
 \ 'port': '9000',
 \ 'path_maps': {"/var/www/devenv": "/Users/bx2/Projects/rtk-console"}
 \}
-
-" ledger
-let g:ledger_default_commodity='CHF'
-let g:ledger_default_commodity_before=0
-let g:ledger_default_date_format='%Y-%m-%d'
-let g:ledger_commodity_sep=' '
-let g:ledger_winpos='R'
-let g:ledger_extra_options='--pedantic --explicit --check-payees'
-
-" ledger autocomplete
-au FileType ledger inoremap <silent> <tab> <c-r>=ledger#autocomplete_and_align()<cr>
 
 " bindings
 nnoremap ; :
