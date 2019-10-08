@@ -108,7 +108,7 @@ autocmd FileType html,blade,css EmmetInstall
 
 " indent
 autocmd FileType html,javascript,typescript,css setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType python,php setlocal expandtab shiftwidth=4 softtabstop=4
 
 " linting
 let g:ale_lint_on_enter=1
