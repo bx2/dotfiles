@@ -4,3 +4,5 @@ config/base16-shell
 config/yarn
 config/configstore
 config/karabiner/automatic_backups/**
+config/htop
+config/coc
