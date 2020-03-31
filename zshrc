@@ -70,7 +70,15 @@ alias ll='ls -alph'
 alias scp='noglob scp'
 alias gorun='go run $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 1)'
 alias gorace='go run -race $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 1)'
-alias vim=nvim
-alias vi=nvim
+#alias vim=nvim
+#alias vi=nvim
 alias dc=docker-compose
 alias dce='docker-compose exec'
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
+
+# opam configuration
+#test -r /Users/bx2/.opam/opam-init/init.zsh && . /Users/bx2/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

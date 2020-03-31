@@ -24,4 +24,6 @@
     rhh = reset HEAD --hard
     lol = log --graph --oneline --decorate
     d = difftool
+    code-changes = "!git log --format=format: --name-only | egrep -v '^$' | sort | uniq -c | sort -rg | head -25"
+    cc = "!git code-changes"
 
