@@ -1022,29 +1022,6 @@
                                     {
                                         "name": "spacefn_mode",
                                         "type": "variable_if",
-                                        "value": 0
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "grave_accent_and_tilde",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "spacefn_mode",
-                                        "type": "variable_if",
                                         "value": 1
                                     }
                                 ],
@@ -1072,7 +1049,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "grave_accent_and_tilde",
+                                    "key_code": "m",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -1463,18 +1440,18 @@
                         },
                         {
                             "from": {
-                                "key_code": "left_control"
-                            },
-                            "to": {
-                                "key_code": "fn"
-                            }
-                        },
-                        {
-                            "from": {
                                 "key_code": "left_option"
                             },
                             "to": {
                                 "key_code": "left_command"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "right_control"
+                            },
+                            "to": {
+                                "key_code": "right_command"
                             }
                         }
                     ]
