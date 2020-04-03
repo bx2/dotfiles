@@ -2,3 +2,4 @@ set fileencodings=utf-8
 set encoding=utf-8
 
 set number
+let g:netrw_banner=0

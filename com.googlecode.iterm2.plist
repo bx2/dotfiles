@@ -98204,10 +98204,17 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf700-0x220000</key>
+		<key>0xf700-0x280000</key>
 		<dict>
 			<key>Action</key>
 			<integer>20</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf700-0x2a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>55</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -98218,10 +98225,17 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf701-0x220000</key>
+		<key>0xf701-0x280000</key>
 		<dict>
 			<key>Action</key>
 			<integer>21</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf701-0x2a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>56</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -98232,10 +98246,17 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf702-0x220000</key>
+		<key>0xf702-0x280000</key>
 		<dict>
 			<key>Action</key>
 			<integer>18</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf702-0x2a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>53</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -98253,10 +98274,17 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf703-0x220000</key>
+		<key>0xf703-0x280000</key>
 		<dict>
 			<key>Action</key>
 			<integer>19</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf703-0x2a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>54</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -98365,10 +98393,14 @@
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Projects/dotfiles</string>
+	<key>NSNavLastUserSetHideExtensionButtonState</key>
+	<false/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedStateForSaveMode</key>
+	<true/>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -98412,6 +98444,8 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>777 239 654 309 0 0 1680 1050 </string>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>409 314 841 470 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
 	<string>532 639 616 174 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -99268,8 +99302,8 @@
 		<string>3.3.5</string>
 		<string>3.3.7</string>
 		<string>3.3.9</string>
-		<string>3.3.0</string>
 		<string>3.2.9</string>
+		<string>3.3.0</string>
 		<string>3.3.4</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
@@ -99306,7 +99340,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>586471934.368801</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>90</integer>
+	<integer>94</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -100101,7 +100135,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-31T16:29:22Z</date>
+	<date>2020-04-02T18:37:50Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
