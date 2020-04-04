@@ -70,8 +70,8 @@ alias ll='ls -alph'
 alias scp='noglob scp'
 alias gorun='go run $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 1)'
 alias gorace='go run -race $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 1)'
-#alias vim=nvim
-#alias vi=nvim
+alias vim=nvim
+alias vi=nvim
 alias dc=docker-compose
 alias dce='docker-compose exec'
 

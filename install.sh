@@ -120,7 +120,6 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   ln -sf $BASE_DIR/git/gitignore ~/.gitignore
   ln -sf $BASE_DIR/ctags/ctags ~/.ctags
   ln -sf $BASE_DIR/config ~/.config
-  ln -sf $BASE_DIR/.vim ~/.vim/
 fi
 
 # install go tools
