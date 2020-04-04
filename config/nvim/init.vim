@@ -2,6 +2,7 @@ set fileencodings=utf-8
 set encoding=utf-8
 
 let mapleader =","
+let g:mapleader=","
 
 " install plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
@@ -43,7 +44,24 @@ nnoremap <Leader>a :Ack!<Space>
 filetype plugin indent on
 syntax on
 
+set t_Co=256
+
 set number
+set hidden
+set cmdheight=2
+set nobackup
+set nowritebackup
+
+set smarttab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
+
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
 
 let g:netrw_banner=0
 
@@ -57,6 +75,25 @@ let g:coc_global_extensions = [
  \ 'coc-json',
  \ 'coc-phpls',
  \]
+
+" trigger completion
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " one shift less
 nnoremap ; :
