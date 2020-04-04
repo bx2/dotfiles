@@ -51,20 +51,36 @@ set hidden
 set cmdheight=2
 set nobackup
 set nowritebackup
-
+set backspace=indent,eol,start
+set termguicolors
+set nowrap
+set novisualbell
+set noerrorbells
+set noswapfile
+set cursorline
+set nojoinspaces
+set title
+set wildmenu
+set smartcase
+set splitright
+set splitbelow
+set autowrite
+set autowriteall
+set hlsearch
+set ignorecase
+set incsearch
 set smarttab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
-
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
+set listchars=trail:·
 
 let g:netrw_banner=0
-
 let g:coc_global_extensions = [
  \ 'coc-git',
  \ 'coc-snippets',
@@ -74,6 +90,8 @@ let g:coc_global_extensions = [
  \ 'coc-html',
  \ 'coc-json',
  \ 'coc-phpls',
+ \ 'coc-go',
+ \ 'coc-clangd',
  \]
 
 " trigger completion
