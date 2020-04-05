@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'chriskempson/base16-vim'
   Plug 'itchyny/lightline.vim'
   Plug 'tpope/vim-fugitive'
+  Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " colors
@@ -33,6 +34,7 @@ filetype plugin indent on
 syntax on
 
 set t_Co=256
+set nocompatible
 set noshowmode
 set number
 set hidden
@@ -103,6 +105,13 @@ let g:fzf_action={
   \ 'ctrl-v': 'vsplit'
   \ }
 nnoremap <c-p> :FZF<cr>
+
+" vimwiki
+let g:vimwiki_list = [{
+  \ 'path': '~/vimwiki/',
+  \ 'syntax': 'markdown', 
+  \ 'ext': '.md'
+  \ }]
 
 " content search
 if executable('ag')
