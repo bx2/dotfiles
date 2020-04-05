@@ -18,6 +18,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'chriskempson/base16-vim'
   Plug 'itchyny/lightline.vim'
+  Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " colors
@@ -40,6 +41,19 @@ if executable('ag')
 endif
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+
+
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 " general
 filetype plugin indent on
