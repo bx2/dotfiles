@@ -46,7 +46,7 @@ filetype plugin indent on
 syntax on
 
 set t_Co=256
-
+set noshowmode
 set number
 set hidden
 set cmdheight=2
