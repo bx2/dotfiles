@@ -28,33 +28,6 @@ if filereadable(expand("~/.vimrc_background"))
   hi Search ctermbg=magenta ctermfg=black
 endif
 
-" fuzzy search
-let g:fzf_action={
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \ }
-nnoremap <c-p> :FZF<cr>
-
-" content search
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
-
-
-" lightline
-let g:lightline = {
-  \ 'colorscheme': 'one',
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-  \ },
-  \ 'component_function': {
-  \   'gitbranch': 'FugitiveHead'
-  \ },
-  \ }
-
 " general
 filetype plugin indent on
 syntax on
@@ -95,7 +68,22 @@ set shortmess+=c
 set signcolumn=yes
 set listchars=trail:·
 
+" netrw
 let g:netrw_banner=0
+
+" lightline
+let g:lightline = {
+  \ 'colorscheme': 'one',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'FugitiveHead'
+  \ },
+  \ }
+
+" coc
 let g:coc_global_extensions = [
  \ 'coc-git',
  \ 'coc-snippets',
@@ -108,6 +96,20 @@ let g:coc_global_extensions = [
  \ 'coc-go',
  \ 'coc-clangd',
  \]
+
+" fuzzy search
+let g:fzf_action={
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit'
+  \ }
+nnoremap <c-p> :FZF<cr>
+
+" content search
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
 
 " Map <tab> for trigger completion, completion confirm, 
 " snippet expand and jump like VSCode.
