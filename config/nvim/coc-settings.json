@@ -1,3 +1,4 @@
 {
-    "languageserver": {}
+    "coc.preferences.formatOnType": true,
+    "coc.preferences.jumpCommand": "vsplit"
 }
