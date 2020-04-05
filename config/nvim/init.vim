@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'chriskempson/base16-vim'
+  Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " colors
