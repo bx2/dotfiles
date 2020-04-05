@@ -1,4 +1,5 @@
 {
+    "intelephense.licenceKey": "/Users/bx2/.intelephense",
     "coc.preferences.formatOnType": true,
     "coc.preferences.jumpCommand": "vsplit"
 }
