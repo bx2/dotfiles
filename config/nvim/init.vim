@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'vimwiki/vimwiki'
+  Plug 'mattn/calendar-vim'
 call plug#end()
 
 " colors
@@ -108,9 +109,9 @@ nnoremap <c-p> :FZF<cr>
 
 " vimwiki
 let g:vimwiki_list = [{
-  \ 'path': '~/vimwiki/',
+  \ 'path': '/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki',
   \ 'syntax': 'markdown', 
-  \ 'ext': '.md'
+  \ 'ext': '.txt'
   \ }]
 
 " content search
