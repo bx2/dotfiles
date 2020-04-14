@@ -70,6 +70,7 @@ alias ll='ls -alph'
 alias scp='noglob scp'
 alias gorun='go run $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 1)'
 alias gorace='go run -race $(find . -name "*.go" -and -not -name "*_test.go" -maxdepth 1)'
+alias terraform='tf'
 alias vim=nvim
 alias vi=nvim
 alias dc=docker-compose
@@ -82,3 +83,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # opam configuration
 #test -r /Users/bx2/.opam/opam-init/init.zsh && . /Users/bx2/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
