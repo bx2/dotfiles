@@ -3,18 +3,22 @@
 # global zsh settings
 autoload -Uz compinit && compinit
 autoload -U colors && colors
-setopt prompt_subst
-setopt extended_glob
+
+setopt AUTO_CD        # if a command is issued that can’t be executed as a normal command, and the command is the name of a directory, perform the cd command to that directory.
+setopt PROMPT_SUBST   # parameter expansion, command substitution and arithmetic expansion are performed in prompts
+setopt EXTENDED_GLOB  # treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation, etc.
 
 # shell history
 HISTSIZE=1000000000   # the number of lines the shell will keep within one session 
 SAVEHIST=1000000000   # the number of lines of your history we want saved
-HISTFILE=~/.history   # the path to the file where the history is stored
+HISTFILE=$HOME/.zsh_history   # the path to the file where the history is stored
 
+setopt SHARE_HISTORY       # share history across multiple zsh sessions
 setopt NO_HIST_BEEP        # scroll up or down beyond the end of the history list, the shell will NOT beep
 setopt INC_APPEND_HISTORY  # each line is added to the history in this way as it is executed
 setopt HIST_IGNORE_DUPS    # do not store a history line if it's the same as the previous one
 setopt HIST_FIND_NO_DUPS   # searches backwards with editor commands don't show commands more than once
+setopt HIST_REDUCE_BLANKS  # removes blank lines from history
 
 # terminal colors
 BASE16_SHELL=$HOME/.config/base16-shell/
