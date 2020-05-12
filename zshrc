@@ -6,6 +6,16 @@ autoload -U colors && colors
 setopt prompt_subst
 setopt extended_glob
 
+# shell history
+HISTSIZE=1000000000   # the number of lines the shell will keep within one session 
+SAVEHIST=1000000000   # the number of lines of your history we want saved
+HISTFILE=~/.history   # the path to the file where the history is stored
+
+setopt NO_HIST_BEEP        # scroll up or down beyond the end of the history list, the shell will NOT beep
+setopt INC_APPEND_HISTORY  # each line is added to the history in this way as it is executed
+setopt HIST_IGNORE_DUPS    # do not store a history line if it's the same as the previous one
+setopt HIST_FIND_NO_DUPS   # searches backwards with editor commands don't show commands more than once
+
 # terminal colors
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
