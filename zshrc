@@ -85,4 +85,10 @@ alias dce='docker-compose exec'
 #test -r /Users/bx2/.opam/opam-init/init.zsh && . /Users/bx2/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 autoload -U +X bashcompinit && bashcompinit
+
+# hashicorp
+export VAULT_ADDR=http://127.0.0.1:8200
 complete -o nospace -C /usr/local/bin/terraform terraform
+complete -o nospace -C /usr/local/bin/vault vault
+complete -o nospace -C /usr/local/bin/nomad nomad
+complete -o nospace -C /usr/local/bin/consul consul
