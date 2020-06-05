@@ -21,6 +21,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'vimwiki/vimwiki'
   Plug 'mattn/calendar-vim'
+  Plug 'stephpy/vim-yaml'
+  Plug 'saltstack/salt-vim'
 call plug#end()
 
 " colors
