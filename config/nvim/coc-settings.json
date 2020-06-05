@@ -1,5 +1,10 @@
 {
     "intelephense.licenceKey": "/Users/bx2/.intelephense",
     "coc.preferences.formatOnType": true,
-    "coc.preferences.jumpCommand": "vsplit"
+    "coc.preferences.jumpCommand": "vsplit",
+    "go.enable": true,
+    "go.goplsOptions": {
+        "completeUnimported": true,
+        "usePlaceholders": true
+    }
 }

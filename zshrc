@@ -41,7 +41,7 @@ export LC_COLLATE="C"
 export GREP_OPTIONS='--color=auto'
 export EDITOR='nvim'
 export VISUAL='nvim'
-export MYVIMRC='~/.config/nvim/init.vim'
+export MYVIMRC=$HOME/.config/nvim/init.vim
 
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
@@ -57,24 +57,24 @@ export GO15VENDOREXPERIMENT=1
 
 # path settings
 export PATH=/usr/local/opt/llvm/bin:/usr/local/sbin:$GOPATH/bin:$GOROOT/bin:$PATH
-export CDPATH=.:~:$GOPATH/src:~/Projects
+export CDPATH=.:$HOME:$GOPATH/src:$HOME/Projects
 
 # virtualenvwrapper
-export WORKON_HOME=~/.virtualenvs
-export PROJECT_HOME=~/Projects
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 
 # passwords
-[[ -a ~/.access ]] && source ~/.access
+[[ -a $HOME/.access ]] && source $HOME/.access
 
 # helpers
 [[ -a /usr/local/bin/virtualenvwrapper.sh ]] && source /usr/local/bin/virtualenvwrapper.sh
 [[ -a /usr/libexec/path_helper ]] && eval `/usr/libexec/path_helper -s`
 
 # fuzzy search
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 # aliases
@@ -106,3 +106,5 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 complete -o nospace -C /usr/local/bin/vault vault
 complete -o nospace -C /usr/local/bin/nomad nomad
 complete -o nospace -C /usr/local/bin/consul consul
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

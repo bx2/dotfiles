@@ -164,6 +164,9 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" coc-go: Organize imports on save
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+
 " one shift less
 nnoremap ; :
 
