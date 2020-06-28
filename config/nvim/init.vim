@@ -111,8 +111,17 @@ nnoremap <c-p> :FZF<cr>
 
 " vimwiki
 let g:vimwiki_list = [{
-  \ 'path': '/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki',
+  \ 'path': '/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/wiki',
   \ 'path_html':'/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/html',
+  \ 'template_path':'/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/templates',
+  \ 'name': 'bx2 wiki',
+  \ 'diary_rel_path': 'journal/',
+  \ 'links_space_char': '_',
+  \ 'diary_index': 'journal',
+  \ 'auto_diary_index': 1,
+  \ 'auto_tags': 1,
+  \ 'auto_generate_tags': 1,
+  \ 'automatic_nested_syntaxes': 1,
   \ 'nested_syntaxes': {'python': 'python', 'c': 'c', 'c++': 'cpp', 'go': 'go', 'php': 'php', 'javascript': 'js', 'html': 'html', 'json': 'json', 'css': 'css'},
   \ 'syntax': 'default', 
   \ 'ext': '.txt'
