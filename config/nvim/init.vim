@@ -112,7 +112,9 @@ nnoremap <c-p> :FZF<cr>
 " vimwiki
 let g:vimwiki_list = [{
   \ 'path': '/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki',
-  \ 'syntax': 'markdown', 
+  \ 'path_html':'/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/html',
+  \ 'nested_syntaxes': {'python': 'python', 'c': 'c', 'c++': 'cpp', 'go': 'go', 'php': 'php', 'javascript': 'js', 'html': 'html', 'json': 'json', 'css': 'css'},
+  \ 'syntax': 'default', 
   \ 'ext': '.txt'
   \ }]
 
