@@ -87,16 +87,10 @@ alias gorace='go run -race $(find . -name "*.go" -and -not -name "*_test.go" -ma
 alias tf=terraform
 alias vim=nvim
 alias vi=nvim
+alias nb=newsboat
+alias nm=neomutt
 alias dc=docker-compose
 alias dce='docker-compose exec'
-
-# nvm
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
-
-# opam configuration
-#test -r /Users/bx2/.opam/opam-init/init.zsh && . /Users/bx2/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 autoload -U +X bashcompinit && bashcompinit
 
