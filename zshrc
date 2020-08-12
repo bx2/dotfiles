@@ -1,7 +1,6 @@
 #!/bin/zsh
 
-# global zsh settings
-autoload -Uz compinit && compinit
+# enable colors
 autoload -U colors && colors
 
 setopt AUTO_CD        # if a command is issued that can’t be executed as a normal command, and the command is the name of a directory, perform the cd command to that directory.
@@ -30,6 +29,30 @@ GIT_PS1_SHOWUPSTREAM="git"
 GIT_PS1_SHOWDIRTYSTATE=true
 export RPROMPT=$'$(__git_ps1 "%s")'
 export PROMPT="%{$fg[red]%}%~ %#%{$reset_color%} "
+
+# basic auto/tab completion
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+set editing-mode vi
+set blink-matching-paren on
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
+
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
 
 # terminal settings
 export TERM=xterm-256color
@@ -91,6 +114,8 @@ alias nb=newsboat
 alias nm=neomutt
 alias dc=docker-compose
 alias dce='docker-compose exec'
+alias py3=python3
+alias py2=python2
 
 autoload -U +X bashcompinit && bashcompinit
 

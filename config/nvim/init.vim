@@ -1,6 +1,5 @@
 set fileencodings=utf-8
-set encoding=utf-8
-
+set encoding=utf-8 
 let mapleader =","
 let g:mapleader=","
 
@@ -182,6 +181,89 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " coc-go: Organize imports on save
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+
+" Emmet
+let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key=','
+autocmd FileType html,blade,css EmmetInstall
+
+" indent
+autocmd FileType html,javascript,typescript,css setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType python,php setlocal expandtab shiftwidth=4 softtabstop=4
+
+" linting
+let g:ale_lint_on_enter=1
+let g:ale_c_parse_makefile=1
+let g:ale_fix_on_save=1
+let g:ale_linters_explicit=1
+let g:ale_set_balloons=1
+let g:ale_sign_column_always=1
+let g:ale_set_highlights=0
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
+let g:ale_c_clang_options = '-std=c11 -Wall'
+let g:ale_c_clangd_options = '-std=c11 -Wall'
+let g:ale_c_clangtidy_options = '-std=c11 -Wall'
+let g:ale_c_gcc_options = '-std=c11 -Wall'
+let g:ale_linters={
+\ 'c': ['clang', 'clangd', 'clangtidy', 'cquery', 'flawfinder', 'gcc'],
+\ 'go': ['gopls', 'gofmt', 'gobuild', 'golint', 'govet'],
+\ 'rust': ['cargo'],
+\ 'python': ['pyls'],
+\ 'php': ['php', 'phpstan', 'phpcs'],
+\ 'javascript': ['tsserver', 'eslint'],
+\ 'typescript': ['tsserver', 'eslint'],
+\ 'json': ['jsonlint'],
+\ 'html': [],
+\}
+let g:ale_fixers={
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\ 'c': ['clang-format', 'uncrustify'],
+\ 'go': ['goimports', 'gofmt'],
+\ 'rust': ['rustfmt'],
+\ 'python': ['isort'],
+\ 'php': ['php_cs_fixer'],
+\ 'javascript': ['eslint'],
+\ 'typescript': ['eslint'],
+\ 'json': ['jq'],
+\ 'css': [],
+\ 'html': [],
+\}
+" rust
+let g:ale_rust_rls_config={
+\ 'rust': {
+\   'clippy_preference': 'on'
+\  }
+\}
+
+"php
+let g:ale_php_phan_use_client = 1
+let g:ale_php_phan_executable = '/usr/local/bin/phpstan'
+
+" ALE colors
+highlight ALEErrorSign ctermfg=1 ctermbg=18 guifg=#ff5c57 guibg=#34353e
+highlight ALEWartningSign ctermfg=3 ctermbg=18 guifg=#f3f99d guibg=#34353e
+
+nnoremap <C-]> :ALEGoToDefinitionInVSplit<cr>
+
+" latex
+let g:tex_flavor='latex'
+let g:vimtex_view_method='skim'
+let g:vimex_quickfix_mode=0
+let g:vimtex_view_automatic=1
+let g:vimtex_compiler_latexmk={
+\ 'continuous' : 1,
+\}
+
+" vdebug
+let g:vdebug_options={
+\ 'idekey': 'xdebug',
+\ 'ide_key': 'xdebug',
+\ 'break_on_open': 1,
+\ 'timeout': 30,
+\ 'server': '',
+\ 'port': '9000',
+\ 'path_maps': {"/var/www/devenv": "/Users/bx2/Projects/rtk-console"}
+\}
 
 " one shift less
 nnoremap ; :
