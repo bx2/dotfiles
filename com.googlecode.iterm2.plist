@@ -11,7 +11,7 @@
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>AlternateMouseScroll</key>
-	<true/>
+	<false/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -27,6 +27,8 @@
 	<key>AutoCommandHistory</key>
 	<false/>
 	<key>AutoHideTmuxClientSession</key>
+	<false/>
+	<key>CGFontRenderingFontSmoothingDisabled</key>
 	<false/>
 	<key>CheckTestRelease</key>
 	<false/>
@@ -98211,13 +98213,6 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf700-0x2a0000</key>
-		<dict>
-			<key>Action</key>
-			<integer>55</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
 		<key>0xf700-0x300000</key>
 		<dict>
 			<key>Action</key>
@@ -98232,13 +98227,6 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf701-0x2a0000</key>
-		<dict>
-			<key>Action</key>
-			<integer>56</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
 		<key>0xf701-0x300000</key>
 		<dict>
 			<key>Action</key>
@@ -98250,13 +98238,6 @@
 		<dict>
 			<key>Action</key>
 			<integer>18</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf702-0x2a0000</key>
-		<dict>
-			<key>Action</key>
-			<integer>53</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -98278,13 +98259,6 @@
 		<dict>
 			<key>Action</key>
 			<integer>19</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf703-0x2a0000</key>
-		<dict>
-			<key>Action</key>
-			<integer>54</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -98392,15 +98366,9 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Projects/dotfiles</string>
-	<key>NSNavLastUserSetHideExtensionButtonState</key>
-	<false/>
+	<string>~/Projects/dotfiles/git</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{712, 448}</string>
-	<key>NSNavPanelExpandedStateForSaveMode</key>
-	<true/>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -98443,27 +98411,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>777 239 654 309 0 0 1680 1050 </string>
-	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>409 314 841 470 0 0 1680 1050 </string>
-	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
-	<string>532 639 616 174 0 0 1680 1027 </string>
+	<string>1257 361 696 436 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 493 620 392 0 0 1680 1050 </string>
+	<string>970 768 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>689 557 918 423 0 0 1680 1050 </string>
-	<key>NSWindow Frame UKCrashReporter</key>
-	<string>127 443 592 584 0 0 1680 1027 </string>
+	<string>1104 929 918 423 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>254 55 810 592 0 0 1680 1027 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>95 155 810 625 0 0 1680 1050 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1452 637 890 777 0 0 3440 1418 </string>
-	<key>NSWindow Frame iTerm Window 3</key>
-	<string>2085 232 890 777 0 0 3440 1418 </string>
-	<key>NSWindow Frame iTerm Window 4</key>
-	<string>30 615 1132 777 0 0 3440 1418 </string>
+	<string>322 204 810 617 0 0 2560 1440 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -98807,6 +98761,13 @@
 					<key>Text</key>
 					<string>0x7f</string>
 				</dict>
+				<key>0xf700-0x220000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[1;2A</string>
+				</dict>
 				<key>0xf700-0x240000</key>
 				<dict>
 					<key>Action</key>
@@ -98820,6 +98781,13 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[1;6A</string>
+				</dict>
+				<key>0xf701-0x220000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[1;2B</string>
 				</dict>
 				<key>0xf701-0x240000</key>
 				<dict>
@@ -98835,6 +98803,13 @@
 					<key>Text</key>
 					<string>[1;6B</string>
 				</dict>
+				<key>0xf702-0x220000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[1;2D</string>
+				</dict>
 				<key>0xf702-0x240000</key>
 				<dict>
 					<key>Action</key>
@@ -98848,6 +98823,13 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[1;6D</string>
+				</dict>
+				<key>0xf703-0x220000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[1;2C</string>
 				</dict>
 				<key>0xf703-0x240000</key>
 				<dict>
@@ -98870,26 +98852,12 @@
 					<key>Text</key>
 					<string>[1;2P</string>
 				</dict>
-				<key>0xf704-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5P</string>
-				</dict>
 				<key>0xf705-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[1;2Q</string>
-				</dict>
-				<key>0xf705-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5Q</string>
 				</dict>
 				<key>0xf706-0x20000</key>
 				<dict>
@@ -98898,26 +98866,12 @@
 					<key>Text</key>
 					<string>[1;2R</string>
 				</dict>
-				<key>0xf706-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5R</string>
-				</dict>
 				<key>0xf707-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[1;2S</string>
-				</dict>
-				<key>0xf707-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5S</string>
 				</dict>
 				<key>0xf708-0x20000</key>
 				<dict>
@@ -98926,26 +98880,12 @@
 					<key>Text</key>
 					<string>[15;2~</string>
 				</dict>
-				<key>0xf708-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[15;5~</string>
-				</dict>
 				<key>0xf709-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[17;2~</string>
-				</dict>
-				<key>0xf709-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[17;5~</string>
 				</dict>
 				<key>0xf70a-0x20000</key>
 				<dict>
@@ -98954,26 +98894,12 @@
 					<key>Text</key>
 					<string>[18;2~</string>
 				</dict>
-				<key>0xf70a-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[18;5~</string>
-				</dict>
 				<key>0xf70b-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[19;2~</string>
-				</dict>
-				<key>0xf70b-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[19;5~</string>
 				</dict>
 				<key>0xf70c-0x20000</key>
 				<dict>
@@ -98982,26 +98908,12 @@
 					<key>Text</key>
 					<string>[20;2~</string>
 				</dict>
-				<key>0xf70c-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[20;5~</string>
-				</dict>
 				<key>0xf70d-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[21;2~</string>
-				</dict>
-				<key>0xf70d-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[21;5~</string>
 				</dict>
 				<key>0xf70e-0x20000</key>
 				<dict>
@@ -99010,47 +98922,12 @@
 					<key>Text</key>
 					<string>[23;2~</string>
 				</dict>
-				<key>0xf70e-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[23;5~</string>
-				</dict>
 				<key>0xf70f-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[24;2~</string>
-				</dict>
-				<key>0xf70f-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[24;5~</string>
-				</dict>
-				<key>0xf710-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[25;5~</string>
-				</dict>
-				<key>0xf711-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[26;5~</string>
-				</dict>
-				<key>0xf712-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[28;5~</string>
 				</dict>
 				<key>0xf729-0x20000</key>
 				<dict>
@@ -99109,7 +98986,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Menlo-Regular 16</string>
+			<string>FiraMono-Regular 16</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -99121,7 +98998,7 @@
 			<key>Screen</key>
 			<integer>-2</integer>
 			<key>Scrollback Lines</key>
-			<integer>10000</integer>
+			<integer>0</integer>
 			<key>Scrollback With Status Bar</key>
 			<false/>
 			<key>Scrollback in Alternate Screen</key>
@@ -99267,7 +99144,7 @@
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
-			<false/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
@@ -99294,61 +99171,42 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.5</string>
-		<string>3.3.3</string>
-		<string>3.3.1</string>
+		<string>3.3.6</string>
 		<string>3.3.8</string>
 		<string>3.3.12</string>
-		<string>3.3.6</string>
-		<string>3.3.11</string>
-		<string>3.3.4</string>
-		<string>3.3.2</string>
+		<string>3.3.1</string>
+		<string>3.3.7</string>
 		<string>3.3.9</string>
 		<string>3.2.9</string>
+		<string>3.3.2</string>
 		<string>3.3.0</string>
-		<string>3.3.7</string>
 	</array>
-	<key>NoSyncBFPRecents</key>
-	<array>
-		<string>Menlo</string>
-	</array>
-	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
-	<true/>
-	<key>NoSyncConfirmShellIntegrationCommand</key>
-	<true/>
-	<key>NoSyncConfirmShellIntegrationCommand_selection</key>
-	<integer>0</integer>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
-	<true/>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
-	<integer>0</integer>
+	<key>NoSyncFrame_SessionsPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{0, 0}, {2560, 1440}}</string>
+		<key>topLeft</key>
+		<string>{977, 1209}</string>
+	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1680, 1050}}</string>
+		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{518, 840}</string>
+		<string>{958, 1115}</string>
 	</dict>
-	<key>NoSyncHaveRequestedFullDiskAccess</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
-	<key>NoSyncInstallUtilitiesPackage</key>
-	<true/>
-	<key>NoSyncInstallUtilitiesPackage_selection</key>
-	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>6572781F-837C-4441-9EDF-8A290A144441</string>
-	<key>NoSyncLastTipTime</key>
-	<real>586471934.368801</real>
+	<string>F3EAB2BA-6912-4EF9-B48C-C105B5DDB25A</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>155</integer>
+	<integer>54</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>586552803.86741495</real>
+	<real>586529702.41507494</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
 	<key>NoSyncPermissionToShowTip</key>
@@ -100056,11 +99914,7 @@
 	<key>NoSyncSuppressBroadcastInputWarning_selection</key>
 	<integer>0</integer>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>511820723.51196498</real>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-	</array>
+	<real>582389549.88813698</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -100079,8 +99933,6 @@
 	<false/>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
-	<key>PerformDictionaryLookupOnQuickLook</key>
-	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -100126,20 +99978,20 @@
 	<integer>8</integer>
 	<key>RightOption</key>
 	<integer>3</integer>
-	<key>SUAutomaticallyUpdate</key>
-	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final_new.xml?shard=88</string>
+	<string>https://iterm2.com/appcasts/final_new.xml?shard=40</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-08-05T20:11:35Z</date>
+	<date>2020-08-13T12:23:43Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>2042536276</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -100178,18 +100030,16 @@
 	<integer>10</integer>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Profiles</string>
 		<string>Notes</string>
 		<string>Jobs</string>
 		<string>Command History</string>
 		<string>Captured Output</string>
 		<string>Paste History</string>
 		<string>Recent Directories</string>
+		<string>Profiles</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
-	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1566739968</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
