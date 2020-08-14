@@ -1,26 +1,36 @@
-# (Blogs)
-https://fs.blog/feed/ "blog"
-https://lukesmith.xyz/rss.xml "blog"
-https://sive.rs/en.atom "blog"
+-----------------------------------------------------------------------
+------------------------------------------------------------------BLOGS
+-----------------------------------------------------------------------
+https://fs.blog/feed/
+https://lukesmith.xyz/rss.xml
+https://sive.rs/en.atom
+https://hackaday.com/blog/feed/
 
-# (Videos)
+-----------------------------------------------------------------------
+-----------------------------------------------------------------VIDEOS
+-----------------------------------------------------------------------
 https://videos.lukesmith.xyz/feeds/videos.xml?accountId=3 
 
-# (YouTube)
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q "yt"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC6nSFpj9HTCZ5t-N3Rm3-HA "yt" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UC8butISFwT-Wl7EV0hUK0BQ "yt"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA "yt"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw "yt"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ "yt"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCBr_Fu6q9iHYQCh13jmpbrg "yt"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCC552Sd-3nyi_tk2BudLUzA "yt"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCEBb1b_L6zDS3xTUrIALZOw "yt"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCKTehwyGCKF-b2wo0RKwrcg "yt"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "yt"
+-----------------------------------------------------------------------
+----------------------------------------------------------------YOUTUBE
+-----------------------------------------------------------------------
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q
+https://www.youtube.com/feeds/videos.xml?channel_id=UC6nSFpj9HTCZ5t-N3Rm3-HA
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8butISFwT-Wl7EV0hUK0BQ
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBr_Fu6q9iHYQCh13jmpbrg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCC552Sd-3nyi_tk2BudLUzA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCEBb1b_L6zDS3xTUrIALZOw
+https://www.youtube.com/feeds/videos.xml?channel_id=UCKTehwyGCKF-b2wo0RKwrcg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg
+https://www.youtube.com/feeds/videos.xml?channel_id=UC6Om9kAkl32dWlDSNlDS9Iw
+https://www.youtube.com/feeds/videos.xml?channel_id=UCLtTf_uKt0Itd0NG7txrwXA
 
-# (Podcasts)
-http://podcasts.joerogan.net/feed "~Joe Rogan Podcast" "podcast"
-https://sive.rs/podcast.rss "~Derek Sivers Podcast" "podcast"
-https://notrelated.xyz/rss "podcast"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCLtTf_uKt0Itd0NG7txrwXA "podcast"
+-----------------------------------------------------------------------
+---------------------------------------------------------------PODCASTS
+-----------------------------------------------------------------------
+http://podcasts.joerogan.net/feed "~Joe Rogan Podcast"
+https://sive.rs/podcast.rss "~Derek Sivers Podcast"
+https://notrelated.xyz/rss
