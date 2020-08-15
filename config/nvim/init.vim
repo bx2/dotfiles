@@ -18,7 +18,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'chriskempson/base16-vim'
   Plug 'itchyny/lightline.vim'
   Plug 'tpope/vim-fugitive'
-  Plug 'vimwiki/vimwiki'
+  Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
   Plug 'mattn/calendar-vim'
   Plug 'stephpy/vim-yaml'
   Plug 'saltstack/salt-vim'
