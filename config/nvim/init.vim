@@ -110,22 +110,25 @@ nnoremap <c-p> :FZF<cr>
 
 " vimwiki
 let g:vimwiki_list = [{
+  \ 'name': 'bx2wiki',
   \ 'path': '/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/wiki',
   \ 'path_html':'/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/html',
   \ 'template_path':'/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/templates',
   \ 'css_file': '/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/templates/style.css',
   \ 'css_name': 'css/style.css',
-  \ 'name': 'bx2 wiki',
   \ 'diary_rel_path': 'journal/',
   \ 'links_space_char': '_',
   \ 'diary_index': 'journal',
   \ 'diary_header': 'Journal',
-  \ 'auto_diary_index': 1,
+  \ 'auto_header': 1,
+  \ 'auto_diary_index': 0,
   \ 'auto_tags': 1,
   \ 'auto_generate_tags': 1,
+  \ 'auto_generate_links': 1,
   \ 'automatic_nested_syntaxes': 1,
   \ 'nested_syntaxes': {'python': 'python', 'c': 'c', 'c++': 'cpp', 'go': 'go', 'php': 'php', 'javascript': 'js', 'html': 'html', 'json': 'json', 'css': 'css'},
   \ 'syntax': 'default', 
+  \ 'hl_headers': 1, 
   \ 'ext': '.txt'
   \ }]
 
@@ -190,6 +193,7 @@ autocmd FileType html,blade,css EmmetInstall
 " indent
 autocmd FileType html,javascript,typescript,css setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType python,php setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType vimwiki setlocal textwidth=80 wrap
 
 " linting
 let g:ale_lint_on_enter=1
