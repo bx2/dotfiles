@@ -8,6 +8,10 @@ https://hackaday.com/blog/feed/
 https://lifehacker.com/rss
 https://xkcd.com/atom.xml
 https://news.ycombinator.com/rss
+http://arxiv.org/rss/cs
+http://arxiv.org/rss/math
+http://arxiv.org/rss/phys
+https://lunduke.com/index.xml
 
 ----------------------------------
 ------------------------------NEWS
@@ -21,10 +25,6 @@ http://rss.cnn.com/rss/edition_world.rss
 ----------------------------VIDEOS
 ----------------------------------
 https://videos.lukesmith.xyz/feeds/videos.xml?accountId=3 
-
-----------------------------------
----------------------------YOUTUBE
-----------------------------------
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q
 https://www.youtube.com/feeds/videos.xml?channel_id=UC6nSFpj9HTCZ5t-N3Rm3-HA
 https://www.youtube.com/feeds/videos.xml?channel_id=UC8butISFwT-Wl7EV0hUK0BQ
@@ -47,6 +47,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg
 ----------------------------------
 http://joeroganexp.joerogan.libsynpro.com/rss
 https://feeds.megaphone.fm/WWO8086402096
+http://vault.lunduke.com/LundukeShowMP3.xml
 https://feeds.megaphone.fm/BMDC5089297303
 https://partiallyexaminedlife.libsyn.com/rss
 http://zizekpodcast.com/category/zizek/feed/
