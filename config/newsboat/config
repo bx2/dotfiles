@@ -26,8 +26,6 @@ bind-key a toggle-article-read
 bind-key n next-unread
 bind-key N prev-unread
 bind-key U show-urls
-bind-key D pb-download
-bind-key x pb-delete
 
 # solarized
 color background         default   default
@@ -43,13 +41,8 @@ highlight article "^(Title):.*$" blue default
 highlight article "https?://[^ ]+" red default
 highlight article "\\[image\\ [0-9]+\\]" green default
 
-# podcasts
-delete-played-files yes
-download-path "~/Downloads/Podcasts/%h/%n"
-player "mpv"
-
 # macros
 macro v set browser "mpv" ; open-in-browser ; set browser linkhandler
 macro w set browser "w3m" ; open-in-browser ; set browser linkhandler
-macro , open-in-browser
 macro e enqueue ; set browser "enqueue-mpv" ; open-in-browser ; set browser linkhandler 
+macro , open-in-browser
