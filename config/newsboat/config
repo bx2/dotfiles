@@ -44,5 +44,5 @@ highlight article "\\[image\\ [0-9]+\\]" green default
 # macros
 macro v set browser "mpv" ; open-in-browser ; set browser linkhandler
 macro w set browser "w3m" ; open-in-browser ; set browser linkhandler
-macro e enqueue ; set browser "enqueue-mpv" ; open-in-browser ; set browser linkhandler 
+macro e enqueue ; set browser "enqueue-mpv" ; open-in-browser ; set browser linkhandler
 macro , open-in-browser

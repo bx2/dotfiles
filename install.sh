@@ -114,6 +114,7 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
   sudo rm -rf ~/.config > /dev/null 2>&1
 
   BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  ln -sf $BASE_DIR/bin ~/bin
   ln -sf $BASE_DIR/zshrc ~/.zshrc
   ln -sf $BASE_DIR/git/gitconfig ~/.gitconfig
   ln -sf $BASE_DIR/git/gitmessage ~/.gitmessage

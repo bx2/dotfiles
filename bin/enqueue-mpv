@@ -1,0 +1,4 @@
+#!/bin/sh
+QUEUE=$HOME/.local/share/newsboat/queue
+[ -s $QUEUE ] || exit
+mpv -- $(tail -1 $QUEUE | awk '{ print $1 }')
