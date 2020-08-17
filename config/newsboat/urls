@@ -1,19 +1,30 @@
--------------------------------------------------------------------
---------------------------------------------------------------BLOGS
--------------------------------------------------------------------
+-----------------------------------
+------------------------------FEEDS
+-----------------------------------
 https://fs.blog/feed/
 https://lukesmith.xyz/rss.xml
 https://sive.rs/en.atom
 https://hackaday.com/blog/feed/
+https://lifehacker.com/rss
+https://xkcd.com/atom.xml
+https://news.ycombinator.com/rss
 
--------------------------------------------------------------------
--------------------------------------------------------------VIDEOS
--------------------------------------------------------------------
+----------------------------------
+------------------------------NEWS
+----------------------------------
+http://feeds.bbci.co.uk/news/world/rss.xml
+https://feeds.a.dj.com/rss/RSSWorldNews.xml
+https://feeds.a.dj.com/rss/RSSMarketsMain.xml
+http://rss.cnn.com/rss/edition_world.rss
+
+----------------------------------
+----------------------------VIDEOS
+----------------------------------
 https://videos.lukesmith.xyz/feeds/videos.xml?accountId=3 
 
--------------------------------------------------------------------
-------------------------------------------------------------YOUTUBE
--------------------------------------------------------------------
+----------------------------------
+---------------------------YOUTUBE
+----------------------------------
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q
 https://www.youtube.com/feeds/videos.xml?channel_id=UC6nSFpj9HTCZ5t-N3Rm3-HA
 https://www.youtube.com/feeds/videos.xml?channel_id=UC8butISFwT-Wl7EV0hUK0BQ
@@ -29,9 +40,16 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC6Om9kAkl32dWlDSNlDS9Iw
 https://www.youtube.com/feeds/videos.xml?channel_id=UCLtTf_uKt0Itd0NG7txrwXA
 https://www.youtube.com/feeds/videos.xml?channel_id=UCk3w4CQ_SlLH4V0-V6WjFZg
 
--------------------------------------------------------------------
------------------------------------------------------------PODCASTS
--------------------------------------------------------------------
-http://podcasts.joerogan.net/feed "~Joe Rogan Podcast"
+----------------------------------
+--------------------------PODCASTS
+----------------------------------
+http://joeroganexp.joerogan.libsynpro.com/rss
+https://feeds.megaphone.fm/WWO8086402096
+http://feeds.feedburner.com/radiolab
 https://sive.rs/podcast.rss "~Derek Sivers Podcast"
 https://notrelated.xyz/rss
+
+----------------------------------
+----------------------------STATUS
+----------------------------------
+https://packet.statuspage.io/history.rss
