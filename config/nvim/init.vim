@@ -279,6 +279,9 @@ nnoremap ,m :bp<cr>
 " remove highlight
 nnoremap ,, :noh<cr>
 
+" insert today's date
+nnoremap ,dt :pu=strftime('%b %d, %Y')<cr>
+
 " window switching
 map <C-h> <C-w>h
 map <C-j> <C-w>j
