@@ -101,6 +101,7 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 # aliases
+alias cp="cp -iv"
 alias g=git
 alias brw=brew
 alias ll='ls -alph'
