@@ -17,7 +17,7 @@ unbind-key v
 unbind-key R
 
 # bind keys
-bind-key ^R reload-all
+bind-key R reload-all
 bind-key j down
 bind-key k up
 bind-key l open
