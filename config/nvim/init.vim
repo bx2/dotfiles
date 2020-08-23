@@ -193,7 +193,7 @@ autocmd FileType html,blade,css EmmetInstall
 " indent
 autocmd FileType html,javascript,typescript,css setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType python,php setlocal expandtab shiftwidth=4 softtabstop=4
-autocmd FileType vimwiki setlocal textwidth=80 wrap spell
+autocmd FileType vimwiki setlocal textwidth=72 wrap spell
 
 " linting
 let g:ale_lint_on_enter=1
@@ -280,7 +280,8 @@ nnoremap ,m :bp<cr>
 nnoremap ,, :noh<cr>
 
 " insert today's date
-nnoremap ,dt :pu=strftime('%b %d, %Y')<cr>
+nnoremap ,dd :pu=strftime('%b %d, %Y')<cr>
+nnoremap ,dt :pu=strftime('%X')<cr>
 
 " window switching
 map <C-h> <C-w>h
