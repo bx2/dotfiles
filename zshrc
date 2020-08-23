@@ -117,6 +117,7 @@ alias dc=docker-compose
 alias dce='docker-compose exec'
 alias py3=python3
 alias py2=python2
+alias wt='curl wttr.in'
 
 autoload -U +X bashcompinit && bashcompinit
 
