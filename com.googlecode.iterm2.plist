@@ -98417,7 +98417,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>1104 929 918 423 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1515 634 810 617 0 0 2560 1440 </string>
+	<string>0 179 1820 1238 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -99200,7 +99200,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>F3EAB2BA-6912-4EF9-B48C-C105B5DDB25A</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>55</integer>
+	<integer>56</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -99987,7 +99987,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-08-14T12:23:53Z</date>
+	<date>2020-08-18T14:33:57Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
@@ -99999,7 +99999,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>

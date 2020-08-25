@@ -22,6 +22,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'mattn/calendar-vim'
   Plug 'stephpy/vim-yaml'
   Plug 'saltstack/salt-vim'
+  Plug 'mileszs/ack.vim'
 call plug#end()
 
 " colors
