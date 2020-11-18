@@ -283,6 +283,7 @@ nnoremap ,, :noh<cr>
 " insert today's date
 nnoremap ,dd :pu=strftime('%b %d, %Y')<cr>
 nnoremap ,dt :pu=strftime('%X')<cr>
+nnoremap ,ds :pu=strftime('%Y%m%d%H%M%S')<cr>
 
 " window switching
 map <C-h> <C-w>h
