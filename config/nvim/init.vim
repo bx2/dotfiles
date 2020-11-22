@@ -171,7 +171,11 @@ else
 endif
 
 " black config
-let g:black_virtualenv = "~/.local/share/nvim/black"
+let g:black_virtualenv = "~/.virtualenvs/neovim3"
+
+" nvim hosts
+let g:python_host_prog="~/.virtualenvs/neovim2/bin/python"
+let g:python3_host_prog="~/.virtualenvs/neovim3/bin/python"
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
