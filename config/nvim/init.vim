@@ -13,6 +13,7 @@ endif
 " install plugins
 call plug#begin('~/.config/nvim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'psf/black', { 'branch': 'stable' }
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'chriskempson/base16-vim'
@@ -133,6 +134,8 @@ let g:vimwiki_list = [{
   \ 'ext': '.txt'
   \ }]
 
+let g:vimwiki_folding = 'list'
+
 " content search
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -167,6 +170,9 @@ else
   imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
+" black config
+let g:black_virtualenv = "~/.local/share/nvim/black"
+
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -195,60 +201,7 @@ autocmd FileType html,blade,css EmmetInstall
 autocmd FileType html,javascript,typescript,css setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType python,php setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType vimwiki setlocal textwidth=72 wrap spell
-
-" linting
-let g:ale_lint_on_enter=1
-let g:ale_c_parse_makefile=1
-let g:ale_fix_on_save=1
-let g:ale_linters_explicit=1
-let g:ale_set_balloons=1
-let g:ale_sign_column_always=1
-let g:ale_set_highlights=0
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
-let g:ale_c_clang_options = '-std=c11 -Wall'
-let g:ale_c_clangd_options = '-std=c11 -Wall'
-let g:ale_c_clangtidy_options = '-std=c11 -Wall'
-let g:ale_c_gcc_options = '-std=c11 -Wall'
-let g:ale_linters={
-\ 'c': ['clang', 'clangd', 'clangtidy', 'cquery', 'flawfinder', 'gcc'],
-\ 'go': ['gopls', 'gofmt', 'gobuild', 'golint', 'govet'],
-\ 'rust': ['cargo'],
-\ 'python': ['pyls'],
-\ 'php': ['php', 'phpstan', 'phpcs'],
-\ 'javascript': ['tsserver', 'eslint'],
-\ 'typescript': ['tsserver', 'eslint'],
-\ 'json': ['jsonlint'],
-\ 'html': [],
-\}
-let g:ale_fixers={
-\ '*': ['remove_trailing_lines', 'trim_whitespace'],
-\ 'c': ['clang-format', 'uncrustify'],
-\ 'go': ['goimports', 'gofmt'],
-\ 'rust': ['rustfmt'],
-\ 'python': ['isort'],
-\ 'php': ['php_cs_fixer'],
-\ 'javascript': ['eslint'],
-\ 'typescript': ['eslint'],
-\ 'json': ['jq'],
-\ 'css': [],
-\ 'html': [],
-\}
-" rust
-let g:ale_rust_rls_config={
-\ 'rust': {
-\   'clippy_preference': 'on'
-\  }
-\}
-
-"php
-let g:ale_php_phan_use_client = 1
-let g:ale_php_phan_executable = '/usr/local/bin/phpstan'
-
-" ALE colors
-highlight ALEErrorSign ctermfg=1 ctermbg=18 guifg=#ff5c57 guibg=#34353e
-highlight ALEWartningSign ctermfg=3 ctermbg=18 guifg=#f3f99d guibg=#34353e
-
-nnoremap <C-]> :ALEGoToDefinitionInVSplit<cr>
+autocmd BufWritePre *.py execute ':Black'
 
 " latex
 let g:tex_flavor='latex'
