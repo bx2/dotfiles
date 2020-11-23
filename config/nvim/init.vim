@@ -101,6 +101,7 @@ let g:coc_global_extensions = [
  \ 'coc-phpls',
  \ 'coc-go',
  \ 'coc-clangd',
+ \ 'coc-pyright'
  \]
 
 " fuzzy search
