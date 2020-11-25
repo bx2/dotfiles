@@ -135,6 +135,8 @@ let g:vimwiki_list = [{
   \ 'ext': '.txt'
   \ }]
 
+let g:vimwiki_auto_header = 1
+
 " content search
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'

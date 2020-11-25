@@ -80,7 +80,7 @@ export GO15VENDOREXPERIMENT=1
 
 # path settings
 export PATH=$HOME/bin:/usr/local/opt/llvm/bin:/usr/local/sbin:$GOPATH/bin:$GOROOT/bin:$PATH
-export CDPATH=.:$HOME:$GOPATH/src:$HOME/Projects
+export CDPATH=.:$HOME:$GOPATH/src:$HOME/Projects:$HOME/Sync
 
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
