@@ -114,10 +114,10 @@ nnoremap <c-p> :FZF<cr>
 " vimwiki
 let g:vimwiki_list = [{
   \ 'name': 'bx2wiki',
-  \ 'path': '/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/wiki',
-  \ 'path_html':'/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/html',
-  \ 'template_path':'/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/templates',
-  \ 'css_file': '/Users/bx2/Library/Mobile Documents/com~apple~CloudDocs/vimwiki/templates/style.css',
+  \ 'path': '/Users/bx2/Sync/vimwiki/wiki',
+  \ 'path_html':'/Users/bx2/Sync/vimwiki/html',
+  \ 'template_path':'/Users/bx2/Sync/vimwiki/templates',
+  \ 'css_file': '/Users/bx2/Sync/vimwiki/templates/style.css',
   \ 'css_name': 'css/style.css',
   \ 'diary_rel_path': 'journal/',
   \ 'links_space_char': '_',
