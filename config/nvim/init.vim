@@ -121,7 +121,7 @@ let g:vimwiki_list = [{
   \ 'css_name': 'css/style.css',
   \ 'diary_rel_path': 'journal/',
   \ 'links_space_char': '_',
-  \ 'diary_index': 'journal',
+  \ 'diary_index': 'index',
   \ 'diary_header': 'Journal',
   \ 'auto_header': 1,
   \ 'auto_diary_index': 0,
@@ -132,10 +132,12 @@ let g:vimwiki_list = [{
   \ 'nested_syntaxes': {'python': 'python', 'c': 'c', 'c++': 'cpp', 'go': 'go', 'php': 'php', 'javascript': 'js', 'html': 'html', 'json': 'json', 'css': 'css'},
   \ 'syntax': 'default', 
   \ 'hl_headers': 1, 
-  \ 'ext': '.txt'
+  \ 'ext': '.txt',
+  \ 'exclude_files': ['**/index.txt'],
   \ }]
 
 let g:vimwiki_auto_header = 1
+let g:vimwiki_dir_link = 'index'
 
 " content search
 if executable('ag')
