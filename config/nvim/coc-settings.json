@@ -6,5 +6,7 @@
     "go.goplsOptions": {
         "completeUnimported": true,
         "usePlaceholders": true
-    }
+    },
+    "python.venvPath": "/Users/bx2/.virtualenvs",
+    "python.linting.mypyEnabled": true
 }

@@ -20,7 +20,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
-  Plug 'mattn/calendar-vim'
   Plug 'stephpy/vim-yaml'
   Plug 'saltstack/salt-vim'
   Plug 'mileszs/ack.vim'
@@ -199,11 +198,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " coc-go: Organize imports on save
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
-" Emmet
-let g:user_emmet_install_global = 0
-let g:user_emmet_leader_key=','
-autocmd FileType html,blade,css EmmetInstall
-
 " indent
 autocmd FileType html,javascript,typescript,css setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType python,php setlocal expandtab shiftwidth=4 softtabstop=4
@@ -217,17 +211,6 @@ let g:vimex_quickfix_mode=0
 let g:vimtex_view_automatic=1
 let g:vimtex_compiler_latexmk={
 \ 'continuous' : 1,
-\}
-
-" vdebug
-let g:vdebug_options={
-\ 'idekey': 'xdebug',
-\ 'ide_key': 'xdebug',
-\ 'break_on_open': 1,
-\ 'timeout': 30,
-\ 'server': '',
-\ 'port': '9000',
-\ 'path_maps': {"/var/www/devenv": "/Users/bx2/Projects/rtk-console"}
 \}
 
 " one shift less
