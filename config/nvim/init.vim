@@ -100,7 +100,6 @@ let g:coc_global_extensions = [
  \ 'coc-phpls',
  \ 'coc-go',
  \ 'coc-clangd',
- \ 'coc-pyright'
  \]
 
 " fuzzy search
@@ -178,6 +177,11 @@ let g:black_virtualenv = "~/.virtualenvs/neovim3"
 " nvim hosts
 let g:python_host_prog="~/.virtualenvs/neovim2/bin/python"
 let g:python3_host_prog="~/.virtualenvs/neovim3/bin/python"
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
