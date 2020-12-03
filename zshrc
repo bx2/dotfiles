@@ -79,7 +79,7 @@ export GOROOT=/usr/local/opt/go/libexec
 export GO15VENDOREXPERIMENT=1
 
 # path settings
-export PATH=$HOME/bin:/usr/local/opt/llvm/bin:/usr/local/sbin:$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=$HOME/bin:/usr/local/opt/llvm/bin:/usr/local/sbin:$GOPATH/bin:$GOROOT/bin:/usr/local/opt/mysql-client/bin:$PATH
 export CDPATH=.:$HOME:$GOPATH/src:$HOME/Projects:$HOME/Sync
 
 # virtualenvwrapper
