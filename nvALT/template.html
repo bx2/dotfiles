@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="bx2">
+
+    <title>{%title%}</title>
+
+    <link rel="stylesheet" href="file://{%support%}/css/solarized-light.css">
+    <style type="text/css">
+{%style%}
+    </style>
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$$','$$']], displayMath: [['\\(','\\)'], ['\\[','\\]']]}
+});
+    </script>
+    <script type="text/javascript" src="file://{%support%}/mathjax/tex-mml-chtml.js" async></script>
+    <script type="text/javascript" src="file://{%support%}/mermaid/mermaid.min.js" async></script>
+    <script>
+// Run the replacement when the browser is ready.
+document.addEventListener("DOMContentLoaded", function(event) { 
+  // Take all <pre> tags ...
+  var elements = document.querySelectorAll("pre");
+  for (var i = 0; i < elements.length; i++) {
+
+    // ... that start with "%%!mermaid".
+    var element = elements[i];
+    if (!element.innerText.startsWith("%%!mermaid")) { return; }
+
+    // Create a `<div class="mermaid">` tag and copy over 
+    // the graph definition.
+    var result = document.createElement('div');
+    result.classList.add("mermaid");
+    result.innerHTML = element.innerText;
+
+    // Then replace the old <pre> block with the new one.
+    element.parentNode.insertBefore(result, element);
+    element.parentNode.removeChild(element);
+  }
+
+  // After all replacements, run Mermaid which will render
+  // the blocks we've just created.
+  mermaidAPI.initialize({
+      'securityLevel': 'loose', 'theme': 'base'
+  });
+});
+    </script>
+  </head>
+
+  <base href="file:///Users/bx2/path/to/folder">
+
+  <body>
+    <div class="container">
+      <div class="starter-template">
+        <h2 class="doctitle">{%title%}</h1>
+        {%content%}
+      </div>
+    </div><!-- /.container -->
+
+    <script src="file://{%support%}/highlight/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script>
+	window.onload = function(e){
+		var container = document.getElementById("wrapper");
+		container.innerHTML = container.innerHTML.replace(/\[\[(.*?)\]\]/g,"<a href='nvalt://find/$1'>$1</a>");
+	}
+	</script>
+  </body>
+</html>
