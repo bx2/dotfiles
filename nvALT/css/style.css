@@ -8,10 +8,6 @@ Author:  Erik Sagen
 Description:  Clean, bouyant fonts and highly readable text
 */
 
-#contentdiv {
-    padding-top:30px;
-}
-
 h1.doctitle {
   background: rgba(233, 235, 219, 1);
   font-size: 17px;
