@@ -20,15 +20,15 @@ MathJax.Hub.Config({
   </head>
 
   <body>
-    <header>
-      <h1 class="doctitle">{%title%}</h1>
-    </header>
-    <main>
-      {%content%}
-    </main>
+    <div id="#wrapper">
+      <header>
+        <h1 class="doctitle">{%title%}</h1>
+      </header>
+      <main id="#contentdiv">
+        {%content%}
+      </main>
+    </div>
 
-    <script src="file://{%support%}/highlight/highlight.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script>
 window.onload = function(e){
     var container = document.getElementById("wrapper");
@@ -64,5 +64,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 });
     </script>
+
+    <script src="file://{%support%}/highlight/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
