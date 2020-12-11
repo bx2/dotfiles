@@ -23,6 +23,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'stephpy/vim-yaml'
   Plug 'saltstack/salt-vim'
   Plug 'mileszs/ack.vim'
+  Plug 'voldikss/vim-floaterm'
+  Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 call plug#end()
 
 " colors
@@ -103,11 +105,38 @@ let g:coc_global_extensions = [
  \]
 
 " fuzzy search
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
+let $FZF_DEFAULT_OPTS='--reverse' 
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let g:fzf_action={
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit'
   \ }
 nnoremap <c-p> :FZF<cr>
+
+" Make Ranger replace Netrw and be the file explorer
+let g:rnvimr_ex_enable = 1
+
+" Make Ranger to be hidden after picking a file
+let g:rnvimr_enable_picker = 1
+
+" Customize the initial layout
+let g:rnvimr_layout = {
+            \ 'relative': 'editor',
+            \ 'width': float2nr(round(1.0 * &columns)),
+            \ 'height': float2nr(round(0.42 * &lines)),
+            \ 'col': float2nr(round(0.0 * &columns)),
+            \ 'row': float2nr(round(0.54 * &lines)),
+            \ 'style': 'minimal'
+            \ }
+nmap <leader>e :RnvimrToggle<CR>
+
+" ripgrep
+nnoremap <leader><space> :Rg<Cr>
+
+" Floaterm
+let g:floaterm_open_command = 'tabe'
+nnoremap <leader>t :FloatermToggle<cr>
 
 " vimwiki
 let g:vimwiki_list = [{
@@ -139,7 +168,7 @@ let g:vimwiki_dir_link = 'index'
 
 " content search
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'ag --vimgrep --nogroup --nocolor --column'
 endif
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
