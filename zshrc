@@ -70,8 +70,8 @@ export MYVIMRC=$HOME/.config/nvim/init.vim
 export HOMEBREW_NO_ANALYTICS=1
 
 # c
-export LDFLAGS="-L/usr/local/opt/llvm/lib"
-export CPPFLAGS="-I/usr/local/opt/llvm/include"
+export LDFLAGS="-L/usr/local/opt/llvm/lib -L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include -I/usr/local/opt/openssl@1.1/include"
 
 # golang settings
 export GOPATH=$HOME/Projects/GOLANG
@@ -79,7 +79,7 @@ export GOROOT=/usr/local/opt/go/libexec
 export GO15VENDOREXPERIMENT=1
 
 # path settings
-export PATH=$HOME/bin:/usr/local/opt/llvm/bin:/usr/local/sbin:$GOPATH/bin:$GOROOT/bin:/usr/local/opt/mysql-client/bin:$PATH
+export PATH=$HOME/bin:/usr/local/opt/llvm/bin:/usr/local/sbin:$GOPATH/bin:$GOROOT/bin:$PATH
 export CDPATH=.:$HOME:$GOPATH/src:$HOME/Projects:$HOME/Sync
 
 # virtualenvwrapper
