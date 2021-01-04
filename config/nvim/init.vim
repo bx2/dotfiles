@@ -115,7 +115,7 @@ let g:fzf_action={
 nnoremap <c-p> :FZF<cr>
 
 " Make Ranger replace Netrw and be the file explorer
-let g:rnvimr_ex_enable = 1
+"let g:rnvimr_ex_enable = 1
 
 " Make Ranger to be hidden after picking a file
 let g:rnvimr_enable_picker = 1
