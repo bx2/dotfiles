@@ -120,6 +120,9 @@ nnoremap <leader><space> :Rg<Cr>
 let g:floaterm_open_command = 'tabe'
 nnoremap <leader>t :FloatermToggle<cr>
 
+" copy 
+vnoremap <C-c> "*y
+
 " vimwiki
 let g:vimwiki_list = [{
   \ 'name': 'bx2wiki',
