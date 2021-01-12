@@ -24,7 +24,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'saltstack/salt-vim'
   Plug 'mileszs/ack.vim'
   Plug 'voldikss/vim-floaterm'
-  Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 call plug#end()
 
 " colors
@@ -113,23 +112,6 @@ let g:fzf_action={
   \ 'ctrl-v': 'vsplit'
   \ }
 nnoremap <c-p> :FZF<cr>
-
-" Make Ranger replace Netrw and be the file explorer
-"let g:rnvimr_ex_enable = 1
-
-" Make Ranger to be hidden after picking a file
-let g:rnvimr_enable_picker = 1
-
-" Customize the initial layout
-let g:rnvimr_layout = {
-            \ 'relative': 'editor',
-            \ 'width': float2nr(round(1.0 * &columns)),
-            \ 'height': float2nr(round(0.42 * &lines)),
-            \ 'col': float2nr(round(0.0 * &columns)),
-            \ 'row': float2nr(round(0.54 * &lines)),
-            \ 'style': 'minimal'
-            \ }
-nmap <leader>e :RnvimrToggle<CR>
 
 " ripgrep
 nnoremap <leader><space> :Rg<Cr>
