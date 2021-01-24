@@ -186,11 +186,18 @@ else
 endif
 
 " black config
-let g:black_virtualenv = "~/.virtualenvs/neovim3"
+"let g:black_virtualenv = "~/.virtualenvs/neovim3"
 
-" nvim hosts
-let g:python_host_prog="~/.virtualenvs/neovim2/bin/python"
-let g:python3_host_prog="~/.virtualenvs/neovim3/bin/python"
+" nvim python hosts
+let pipenv_venv_path = system('pipenv --venv')
+if v:shell_error == 0
+  let venv_path = substitute(pipenv_venv_path, '\n', '', '')
+  let g:python_host_prog = venv_path . '/bin/python'
+  let g:python3_host_prog = venv_path . '/bin/python'
+else
+  let g:python_host_prog="~/.virtualenvs/neovim2/bin/python"
+  let g:python3_host_prog="~/.virtualenvs/neovim3/bin/python"
+endif
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
