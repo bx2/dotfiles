@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-lua/completion-nvim'
   Plug 'psf/black', { 'branch': 'stable' }
+  Plug 'hashivim/vim-hashicorp-tools'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'chriskempson/base16-vim'
