@@ -5,4 +5,5 @@ config/yarn
 config/configstore
 config/karabiner/automatic_backups/**
 config/coc/extensions/**
+config/nvim/plugin/**
 *.cmdline
