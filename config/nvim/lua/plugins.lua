@@ -52,6 +52,14 @@ return require("packer").startup(function()
       require("gitsigns").setup()
     end
   }
+
+  use {
+    "terrortylor/nvim-comment",
+    config = function()
+      require("nvim_comment").setup()
+    end
+  }
+
 end,
   {
     display = {
