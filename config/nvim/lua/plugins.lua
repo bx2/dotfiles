@@ -19,6 +19,21 @@ return require("packer").startup(function()
   -- colors
   use "siduck76/nvim-base16.lua"
 
+  -- status line
+  -- wip
+  use {
+  "glepnir/galaxyline.nvim",
+    branch = "main",
+    config = function() require"statusline" end,
+  }
+
+  -- fuzzy search
+  -- wip
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = {"nvim-lua/popup.nvim", "nvim-lua/plenary.nvim"}
+  }
+
   -- code highlight and indents
   use {
     "nvim-treesitter/nvim-treesitter",
@@ -42,7 +57,11 @@ return require("packer").startup(function()
   }
   use "hrsh7th/nvim-compe"
 
-  -- misc
+  -- snippets
+  use "hrsh7th/vim-vsnip"
+  use "rafamadriz/friendly-snippets"
+
+  -- git markers
   use {
     "lewis6991/gitsigns.nvim",
     requires = {
@@ -53,11 +72,21 @@ return require("packer").startup(function()
     end
   }
 
+  -- comment toggle
+  -- wip
+  -- better shortcuts, currently gcc
   use {
     "terrortylor/nvim-comment",
     config = function()
       require("nvim_comment").setup()
     end
+  }
+
+  -- tree file navigation
+  -- wip
+  -- add shortcuts
+  use {
+    "kyazdani42/nvim-tree.lua",
   }
 
 end,

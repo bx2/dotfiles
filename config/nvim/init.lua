@@ -11,13 +11,13 @@ require "plugins"
 require "plg_lsp"
 require "plg_completion"
 require "plg_treesitter"
+require "plg_nvimtree"
 
 -- color scheme
 local base16 = require "base16"
 base16(base16.themes["spacemacs"], true)
 
 -- blankline
-
 g.indentLine_enabled = 1
 g.indent_blankline_char = "▏"
 
