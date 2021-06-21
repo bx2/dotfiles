@@ -25,6 +25,7 @@ return require("packer").startup(function()
   "glepnir/galaxyline.nvim",
     branch = "main",
     config = function() require"statusline" end,
+    requires = {"kyazdani42/nvim-web-devicons"},
   }
 
   -- fuzzy search
